@@ -306,8 +306,7 @@
     }
 
     .slide {
-        height: 250px;
-        margin-bottom: 10px;
+        height: 200px;
     }
 
     .headline-portfolio .descricao {
@@ -339,7 +338,7 @@
     
     .imagens-case {
         width: 100%;
-        height: 30vh
+        height: 35vh;
     }
 
     .textos-case {
