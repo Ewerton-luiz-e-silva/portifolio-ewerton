@@ -1,8 +1,12 @@
 /* Responsividade para iPad (tablet) */
 @media (max-width: 1024px) {
 
+    html, body {
+        width: 100%;
+    }
+    
     .container {
-        padding: 0;
+        max-width: 100%;
     }
 
     /************************** SOBRE ***/
@@ -13,7 +17,8 @@
 
     .container-sobre {
         height: auto;
-    
+        overflow-x: hidden;
+    }
     .headline-sobre {
         height: auto;
         position: relative;
@@ -252,6 +257,38 @@
 }
 
 @media (max-width: 768px){
+
+    
+    /************************** Inicio ***/
+
+    .complemento-inicio{
+        padding-top: 30px;
+    }
+
+        /************************** SERVIÇOS ***/
+
+        .headline-servicos {
+            flex-direction: column;
+            height: auto;
+        }
+    
+        .titulo-servicos {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+    
+        .titulo-servicos h1 {
+            font-size: 3rem;
+        }
+    
+        .descricao-servicos {
+            width: 100%;
+            text-align: left;
+            font-size: 1.0rem;
+        }
+
     /************************** PORTFOLIO ***/
 
     .container-portfolio {
@@ -272,13 +309,18 @@
     }
 
     .headline-portfolio .titulo {
-        font-size: 6rem;
+        font-size: 3rem;
+    }
+
+    .slide {
+        height: 250px;
+        margin-bottom: 10px;
     }
 
     .headline-portfolio .descricao {
         width: 100%;
-        text-align: right;
-        font-size: 1.4rem;
+        text-align: left;
+        font-size: 1.0rem;
     }
 
     .container-case {
@@ -310,6 +352,10 @@
     .textos-case {
         width: 100%;
         height: 35vh;
+    }
+
+    .conteudo-textos-case p {
+        font-size: 20px;
     }
         /************************** CONTATO ***/
     .contato {
