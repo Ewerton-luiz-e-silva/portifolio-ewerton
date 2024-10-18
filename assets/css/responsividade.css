@@ -4,6 +4,9 @@
     .container {
         padding: 0;
     }
+    
+    [data-aos] {
+    transform: none; /* Reseta transformações se necessário */
 
     /************************** SOBRE ***/
     .sobre {
@@ -258,6 +261,9 @@
         gap: 1rem;
         padding: 1rem 1rem;
     }
+    
+    [data-aos] {
+    transform: none; /* Reseta transformações se necessário */
 
     .headline-portfolio {
         flex-direction: column;
