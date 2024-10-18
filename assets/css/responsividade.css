@@ -252,12 +252,15 @@
 #whatsappButton {
     position: fixed;
     bottom: 20px;
-    right: 130px;
+    right: 20px;
 }
 }
 
 @media (max-width: 768px){
 
+    .curriculo {
+        margin-bottom: 100px;
+    }
     
     /************************** Inicio ***/
 
@@ -470,7 +473,7 @@
 #whatsappButton {
     position: fixed;
     bottom: 20px;
-    right: 120px;
+    right: 20px;
 }
 
 }
