@@ -258,14 +258,14 @@
 
 @media (max-width: 768px){
 
-    .curriculo {
-        margin-bottom: 120px;
-    }
-    
     /************************** Inicio ***/
 
     .complemento-inicio{
         padding-top: 30px;
+    }
+
+    .curriculo {
+        margin-bottom: 100px;
     }
 
         /************************** SERVIÇOS ***/
