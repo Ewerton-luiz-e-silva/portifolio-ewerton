@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ewerton</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsividade.css">
+
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    
+</head>
+
+<body>
+    <!-- Botão de Alternar Tema --> 
+    <button id="theme-toggle" class="theme-btn">🌙</button>  
+    <!--Botão voltar ao topo-->
+    <div id="backToTop" class="fixed-button">
+        <i class="bi bi-chevron-up"></i>
+    </div>
+
+    <!--Botão WhatsApp-->
+    <div id="whatsappButton" class="fixed-button">
+        <a href="https://wa.me/5519999934920" target="_blank"></a>
+        <i class="bi bi-whatsapp"></i>
+    </div>
+
+    <!--Container Geral-->
+    <div class="container">
+
+        <!--Header-->
+        <header class="header">
+            <div class="logo">
+                <img src="assets/img/SUA-LOGO-AQUI.png" alt="">
+            </div>
+            <div class="menu">
+                <label class="hamburger">
+                    <input type="checkbox" id="menuToggle">
+                    <svg viewBox="0 0 32 32">
+                        <path class="line line-top-bottom"
+                            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                        </path>
+                        <path class="line" d="M7 16 27 16"></path>
+                    </svg>
+                </label>
+            </div>
+            <div class="menu-aberto">
+                <nav class="nav-menu">
+                        
+                    <a href="#inicio">INÍCIO <img src="./assets/img/Gif da casa.gif" alt=""></a>
+                    <a href="#sobre">SOBRE <img src="./assets/img/Gif de personagem.gif" alt=""></a>
+                    <a href="#servicos">SERVIÇOS <img src="./assets/img/Gif serviços.gif" alt=""></a>
+                    <a href="#portfolio">PORTFOLIO <img src="./assets/img/Gif portfolio.gif" alt=""></a>
+                    <a href="#contato">CONTATO <img src="./assets/img/Gif contato.gif" alt=""></a> 
+                </nav>
+            </div>
+        </header>
+        <!--Fim Header-->
+
+        <!--Início-->
+        <main id="inicio" class="inicio">
+            <div class="container-inicio">
+                <div class="conteudo-inicio" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="titulo-inicio">
+                        <h1>Ewerton Luiz e Silva</h1>
+                        <h1 class="destaque-inicio">Desenvolvedor em ascensão</h1>
+                    </div>
+                    <div class="paragrafo-inicio" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                        <p>Sou um desenvolvedor web iniciante, motivado a aprender e evoluir em um campo dinâmico. 
+                            Com conhecimentos em HTML, CSS e JavaScript, e estou disposto a expandir para outras tecnologias, 
+                            como frameworks de front-end, back-end e bancos de dados. Sou dedicado, criativo e focado em encontrar soluções inovadoras para os desafios de desenvolvimento.
+                            Acredito que feedbacks são fundamentais para o meu crescimento profissional. 
+                            Estou comprometido em me tornar um desenvolvedor versátil e destaco, buscando constantemente aprendizado e projetos desafiadores para melhorar minhas habilidades.</p>
+                    </div>
+                    <a href="#contato" class="cta" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                        <span>Fale Comigo</span>
+                        <svg width="15px" height="10px" viewBox="0 0 13 10">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                        </svg>
+                    </a>
+                    <a href="./assets/Documento/Ewerton.pdf" class="cta" download data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                        <span>Baixar Currículo <i class="bi bi-download"></i></span>
+                        <svg width="15px" height="20px" viewBox="0 0 13 10">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                        </svg>
+                    </a>
+                </div>
+                <div class="complemento-inicio">
+                    <img class="text" src="assets/img/Gif 01.gif" alt="">
+                    <img class="qr-code" src="assets/img/qr_code_rmdeveloper.png" alt="qr code para seu link bio">
+                </div>
+            </div>
+        </main>
+        <!--Fim Início-->
+
+        <!--Sobre-->
+        <section id="sobre" class="sobre">
+            <div class="container-sobre">
+                <!--Slide Sobre-->
+                <div class="headline-sobre" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="headline-scroll" id="headline-scroll">
+                        <span class="bold">SOBRE</span>
+                        <span class="divisor"></span>
+                        <span class="light">MIM</span>
+                        <span class="divisor"></span>
+                        <span class="bold">SOBRE</span>
+                        <span class="divisor"></span>
+                        <span class="light">MIM</span>
+                        <span class="divisor"></span>
+                        <span class="bold">SOBRE</span>
+                        <span class="divisor"></span>
+                        <span class="light">MIM</span>
+                        <span class="divisor"></span>
+                    </div>
+                </div>
+                <div class="conteudo-sobre">
+                    <div class="left-sobre" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="textos-sobre">
+                            <h1>Olá, Meu nome e Ewerton</h1>
+                            <p>Com 29 anos, decidi finalmente seguir minha paixão e me aventurar no mundo do desenvolvimento. 
+                                Mesmo sendo novo na área, estou determinado a aprender e me aprimorar, buscando conhecimento e experiência para me tornar um profissional competente e bem-sucedido. 
+                                Estou cursando Análise e Desenvolvimento de Sistemas, e também um curso de Full Stack Java, para obter mais conhecimentos.
+
+                                Que tal se conectar comigo nas redes sociais abaixo e saber mais sobre meu trabalho?</p>
+                        </div>
+                        <div class="redes-sociais">
+                            <a href="https://www.instagram.com/ewertonluizesilva?igsh=Zmh3aTVsNXZkYThj&utm_source=qr" target="_blank">INSTAGRAM<i class="bi bi-arrow-right"></i></a>
+                            <a href="https://github.com/Ewerton-luiz-e-silva" target="_blank">GITHUB<i class="bi bi-arrow-right"></i></a>
+                            <a href="mailto:ewerton.luiz_1994@hotmail.com?subject=E-mail" target="_blank">ENVIAR-EMAIL<i class="bi bi-arrow-right"></i>
+                            <a href="https://www.linkedin.com/in/ewerton-luiz-e-silva-63b0a42b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LINKEDIN<i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="right-sobre" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="imagem-sobre imagem-container">
+                            <img src="assets/img/Ewerton.png" alt="">
+                        </div>
+                        <div class="complemento-sobre">
+                            <img src="assets/img/texto-giratorio.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fim Sobre-->
+
+        <!--Skills-->
+        <section id="skills" class="skills">
+            <div class="container-skills" data-aos="fade-up" data-aos-duration="1000">
+                <div class="headline-skills">
+                    <div class="text-headline-skills" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                        <h2>Minhas Skills <img class="gifs" src="./assets/img/Gif Minhas Skills.gif" alt=""></h2>
+                        <p>Ao longo da minha carreira como desenvolvedor, adquiri habilidades em diversas tecnologias e ferramentas que me permitem criar soluções modernas, eficientes e escaláveis, tanto no front-end quanto no back-end.</p>
+                    </div>
+                </div>
+                <div class="conteudo-skills">
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                        <i class="bi bi-palette"></i>
+                        <h3>HTML5 & CSS3</h3>
+                        <p>Crio interfaces web modernas, acessíveis e responsivas, utilizando as melhores práticas de HTML5 e CSS3.</p>
+                    </div>
+                    
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                        <i class="bi bi-code-slash"></i>
+                        <h3>JavaScript & ES6+</h3>
+                        <p>Domino JavaScript e suas versões mais recentes (ES6+), aplicando conceitos avançados para criar experiências dinâmicas e interativas.</p>
+                    </div>
+                    
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                        <i class="bi bi-grid-3x3-gap"></i>
+                        <h3>Bootstrap</h3>
+                        <p>Utilizo o Bootstrap para criar layouts responsivos rapidamente, garantindo consistência e velocidade no desenvolvimento front-end.</p>
+                    </div>
+                    
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                        <i class="bi bi-layers"></i>
+                        <h3>jQuery</h3>
+                        <p>Facilito a manipulação de elementos DOM e eventos, criando interações dinâmicas de forma eficiente com jQuery.</p>
+                    </div>
+                    
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+                        <i class="bi bi-chevron-bar-contract"></i>
+                        <h3>AOS (Animate on Scroll)</h3>
+                        <p>Implemento animações suaves ao rolar a página, melhorando a experiência do usuário com AOS.</p>
+                    </div>
+                    
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                        <i class="bi bi-terminal"></i>
+                        <h3>Grunt</h3>
+                        <p>Automatizo tarefas repetitivas no desenvolvimento front-end, como compilação de estilos e minificação de arquivos, com Grunt.</p>
+                    </div>
+                    
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">
+                        <i class="bi bi-file-code"></i>
+                        <h3>Sass & Less</h3>
+                        <p>Uso Sass e Less para escrever CSS mais estruturado e modular, facilitando a manutenção e escalabilidade dos estilos.</p>
+                    </div>
+                    
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+                        <i class="bi bi-play"></i>
+                        <h3>Gulp</h3>
+                        <p>Crio pipelines de build eficientes, automatizando tarefas como minificação e compilação com Gulp.</p>
+                    </div>
+                    
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="1100" data-aos-duration="1000">
+                        <i class="bi bi-arrow-repeat"></i>
+                        <h3>ES6+</h3>
+                        <p>Utilizo os recursos modernos do JavaScript ES6+, como arrow functions, promises e destructuring, para escrever código mais conciso e eficiente.</p>
+                    </div>
+                    
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="1000">
+                        <i class="bi bi-braces"></i>
+                        <h3>TypeScript</h3>
+                        <p>Utilizo TypeScript para adicionar tipagem estática ao JavaScript, tornando o código mais robusto e fácil de manter.</p>
+                    </div>
+                    
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="1300" data-aos-duration="1000">
+                        <i class="bi bi-diagram-3"></i>
+                        <h3>VueJS</h3>
+                        <p>Crio interfaces de usuário reativas e componentes reutilizáveis com VueJS, facilitando o desenvolvimento de SPA's.</p>
+                    </div>
+                    
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="1400" data-aos-duration="1000">
+                        <i class="bi bi-box-arrow-in-right"></i>
+                        <h3>React</h3>
+                        <p>Desenvolvo aplicações web modernas e interativas utilizando React, focando na reutilização de componentes e otimização de performance.</p>
+                    </div>
+                    
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1000">
+                        <i class="bi bi-check2-circle"></i>
+                        <h3>E2E com Cypress</h3>
+                        <p>Realizo testes de ponta a ponta com Cypress, garantindo a qualidade e a funcionalidade da aplicação em diferentes fluxos de uso.</p>
+                    </div>
+                    
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="1600" data-aos-duration="1000">
+                        <i class="bi bi-code-slash"></i>
+                        <h3>Java</h3>
+                        <p>Desenvolvo soluções backend utilizando Java, aplicando boas práticas de programação orientada a objetos e garantindo alta performance.</p>
+                    </div>
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="1700" data-aos-duration="1000">
+                        <i class="bi bi-git"></i>
+                        <h3>Git</h3>
+                        <p>Utilizo Git para controle de versão, permitindo gerenciar e rastrear mudanças no código de forma eficiente, colaborando em equipe e mantendo a integridade do projeto.</p>
+                    </div>
+                    
+                    <div class="box-skills" data-aos="fade-up" data-aos-delay="1800" data-aos-duration="1000">
+                        <i class="bi bi-github"></i>
+                        <h3>GitHub</h3>
+                        <p>Utilizo GitHub para hospedagem de projetos, colaboração com outros desenvolvedores e gerenciamento de repositórios, facilitando o compartilhamento e a revisão de código.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fim Skills-->
+
+        <!--Serviços-->
+<section id="servicos" class="servicos">
+    <div class="container-servicos">
+        <div class="headline-servicos" data-aos="fade-up" data-aos-duration="1000">
+            <div class="titulo-servicos">
+                <h1>Serviços <img class="gifs" src="./assets/img/Gif Serviços 02.gif" alt=""></h1>
+            </div>
+            <div class="descricao-servicos" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <p>Ofereço uma variedade de serviços para atender às suas necessidades de desenvolvimento web, desde a criação de interfaces até a implementação de soluções completas.</p>
+            </div>
+        </div>
+        <div class="servicos-cards">
+            <!--Serviço 1-->
+            <div class="card-servicos-left" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+                <div class="card-titulo">
+                    <h1>Desenvolvimento Front-end</h1>
+                </div>
+                <div class="card-icon"><i class="bi bi-display"></i></div>
+            </div>
+            <!--Serviço 2-->
+            <div class="card-servicos" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">
+                <div class="card-titulo">
+                    <h1>Desenvolvimento Back-end</h1>
+                </div>
+                <div class="card-icon"><i class="bi bi-server"></i></div>
+            </div>
+            <!--Serviço 3-->
+            <div class="card-servicos-left" data-aos="fade-right" data-aos-delay="900" data-aos-duration="1000">
+                <div class="card-titulo">
+                    <h1>Desenvolvimento de Software</h1>
+                </div>
+                <div class="card-icon"><i class="bi bi-laptop"></i></div>
+            </div>
+            <!--Serviço 4-->
+            <div class="card-servicos-left" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+                <div class="card-titulo">
+                    <h1>Desenvolvimento de Aplicações Web</h1>
+                </div>
+                <div class="card-icon"><i class="bi bi-code-slash"></i></div>
+            </div>
+            <!--Serviço 5-->
+            <div class="card-servicos" data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
+                <div class="card-titulo">
+                    <h1>Consultoria em Tecnologias Web</h1>
+                </div>
+                <div class="card-icon"><i class="bi bi-lightbulb"></i></div>
+            </div>
+            <!--Serviço 6-->
+            <div class="card-servicos-left" data-aos="fade-right" data-aos-delay="700" data-aos-duration="1000">
+                <div class="card-titulo">
+                    <h1>Otimização de Performance</h1>
+                </div>
+                <div class="card-icon"><i class="bi bi-speedometer"></i></div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+        <!--Fim Serviços-->
+
+        <!--Complemento FREE YOUR MIND-->
+        <section id="free-your-mind" class="free-your-mind">
+            <div class="container-free-your-mind" data-aos="fade-up" data-aos-duration="1000">
+                <div class="line-container" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    <span> Desenvolva, </span>
+                    <span class="line"></span>
+                </div>
+                <div class="line-container center" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                    <span class="line"></span>
+                    <span> Aprenda, </span>
+                    <span class="line"></span>
+                </div>
+                <div class="line-container right" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                    <span class="line"></span>
+                    <span> Cresça! </span>
+                </div>
+            </div>
+        </section>
+        <!--Fim FREE YOUR MIND-->
+
+        <!--Portfolio-->
+        <section id="portfolio" class="portfolio">
+            <div class="container-portfolio" data-aos="fade-up" data-aos-duration="1000">
+                <div class="headline-portfolio">
+                    <h1 class="titulo">Portfolio <img class="gifs" src="./assets/img/Portfolio 02.gif" alt=""></h1>
+                    <span class="descricao">Bem-vindo à seção onde compartilho minhas conquistas acadêmicas e profissionais. Aqui você encontrará meus certificados de cursos que aprimoram minhas habilidades em desenvolvimento e tecnologia, além de projetos que aplicam esses conhecimentos na prática. Cada certificado representa um novo passo na minha jornada de aprendizado contínuo. Já os projetos demonstram minha capacidade de transformar teoria em soluções funcionais e inovadoras. Explore e conheça mais sobre minha trajetória!</span>
+                </div>
+                <div class="container-case">
+
+                    <!--Case 1-->
+                    <div class="case1" data-aos="fade-right" data-aos-delay="200">
+                        <div class="imagens-case">
+                            <div class="slide">
+                                <i class="bi bi-chevron-left prev"></i>
+                                <img src="./assets/img/Certificados/1 (1).jpeg" alt="">
+                                <img src="./assets/img/Certificados/1 (1).jpg" alt="">
+                                <img src="./assets/img/Certificados/1 (1).png" alt="">
+                                <img src="./assets/img/Certificados/1 (2).png" alt="">
+                                <img src="./assets/img/Certificados/1 (3).png" alt="">
+                                <img src="./assets/img/Certificados/1 (4).png" alt="">
+                                <img src="./assets/img/Certificados/1 (5).png" alt="">
+                                <img src="./assets/img/Certificados/1 (6).png" alt="">
+                                <img src="./assets/img/Certificados/1 (7).png" alt="">
+                                <img src="./assets/img/Certificados/1 (8).png" alt="">
+                                <img src="./assets/img/Certificados/1 (9).png" alt="">
+                                <img src="./assets/img/Certificados/1 (10).png" alt="">
+                                <img src="./assets/img/Certificados/1 (11).png" alt="">
+                                <img src="./assets/img/Certificados/1 (12).png" alt="">
+                                <img src="./assets/img/Certificados/1 (13).png" alt="">
+                                <img src="./assets/img/Certificados/1 (14).png" alt="">
+                                <i class="bi bi-chevron-right next"></i>
+                            </div>
+                        </div>
+                        <div class="textos-case">
+                            <div class="conteudo-textos-case">
+                                <h1>Certificados</h1>
+                                <p>Neste espaço, você encontrará meus certificados, que refletem minha trajetória de aprendizado e aperfeiçoamento em desenvolvimento e tecnologia. Cada conquista aqui representa um passo importante na minha jornada como profissional.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Case 2-->
+                        <div class="case2" data-aos="fade-left" data-aos-delay="300">
+                        <div class="textos-case">
+                            <div class="conteudo-textos-case">
+                                <h1>Projetos EBAC</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt similique quibusdam expedita magnam enim hic illum? Laudantium, deserunt?</p>
+                            </div>
+                        </div>
+                        <div class="imagens-case">
+                            <div class="slide">
+                                <i class="bi bi-chevron-left prev"></i>
+                                <img src="assets/img/imagem.png" alt="">
+                                <img src="assets/img/imagem.png" alt="">
+                                <img src="assets/img/imagem.png" alt="">
+                                <i class="bi bi-chevron-right next"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Case 3-->
+                        <div class="case3" data-aos="fade-right" data-aos-delay="400">
+                        <div class="imagens-case">
+                            <div class="slide">
+                                <i class="bi bi-chevron-left prev"></i>
+                                <img src="assets/img/imagem.png" alt="">
+                                <img src="assets/img/imagem.png" alt="">
+                                <img src="assets/img/imagem.png" alt="">
+                                <i class="bi bi-chevron-right next"></i>
+                            </div>
+                        </div>
+                        <div class="textos-case">
+                            <div class="conteudo-textos-case">
+                                <h1>Projetos de tarefas</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt similique quibusdam expedita magnam enim hic illum? Laudantium, deserunt?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Case 4-->
+                        <div class="case4" data-aos="fade-left" data-aos-delay="500">
+                        <div class="textos-case">
+                            <div class="conteudo-textos-case">
+                                <h1>Projetos pessoal</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt similique quibusdam expedita magnam enim hic illum? Laudantium, deserunt?</p>
+                            </div>
+                        </div>
+                        <div class="imagens-case">
+                            <div class="slide">
+                                <i class="bi bi-chevron-left prev"></i>
+                                <img src="assets/img/imagem.png" alt="">
+                                <img src="assets/img/imagem.png" alt="">
+                                <img src="assets/img/imagem.png" alt="">
+                                <i class="bi bi-chevron-right next"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--Fim Portfolio-->
+
+        <!--Contato-->
+        <section id="contato" class="contato">
+            <div class="container-contato" data-aos="fade-up" data-aos-duration="1000">
+                <div class="headline-contato" data-aos="fade-up" data-aos-delay="200">
+                    <div class="titulo-contato">
+                        <h1>Contato <img class="gifs" src="./assets/img/Gif Contatos 02.gif" alt=""></h1>
+                    </div>
+                    <div class="descricao-contato">
+                        <ul class="lista-contato">
+                            <li>
+                                <a href="https://wa.me/5519999934920" target="_blank">
+                                    <i class="bi bi-whatsapp"></i> WhatsApp
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:ewerton.luiz_1994@hotmail.com?subject=E-mail" target="_blank">
+                                    <i class="bi bi-envelope"></i> E-mail
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.bing.com/search?q=amparo+sp+rua+afonso+geremias+186&form=ANNTH1&refig=57924c36853647488fc5aad77ddf44f7&pc=ACTS&ucpdpc=UCPD&adppc=EdgeStart" target="_blank">
+                                    <i class="bi bi-geo-alt"></i> Endereço
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="conteudo-contato" data-aos="fade-up" data-aos-delay="400">
+                    <div class="formulario-contato">
+                        <h2>Entre em contato</h2>
+                        <p>Fique à vontade para entrar em contato! Utilize o formulário abaixo para enviar uma mensagem e eu retornarei o mais breve possível. Estou sempre aberto a novas oportunidades e parcerias. Estou muito ansioso para fazer sua ideia virar realidade – aceito o desafio!</p>
+                        <form class="form">
+                            <input type="text" placeholder="Digite seu nome completo">
+                            <input type="phone" placeholder="(55) 22222-2222">
+                            <input type="email" placeholder="Seu melhor email">
+                            <textarea name="mensagem" id="mensagem" placeholder="Escreva o que você deseja aqui..."></textarea>
+                            <button class="btn">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="logo-contato" data-aos="fade-up" data-aos-delay="600">
+                        <img src="assets/img/imagem -email.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fim Contato-->
+
+        <!--Footer-->
+        <footer class="footer" id="footer">
+            <div class="footer-column logo-column">
+                <img src="assets/img/SUA-LOGO-AQUI.png" alt="">
+            </div>
+            <div class="container-footer">
+
+                <div class="footer-column menu-column">
+                    <nav class="footer-nav">
+                        <a href="#inicio">Início</a>
+                        <a href="#sobre">Sobre</a>
+                        <a href="#servicos">Serviços</a>
+                        <a href="#portfolio">Portfolio</a>
+                        <a href="#contato">Contato</a>
+                    </nav>
+                </div>
+            
+                <div class="footer-column social-column">
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://www.instagram.com/ewertonluizesilva?igsh=Zmh3aTVsNXZkYThj&utm_source=qr" target="_blank">
+                                <i class="bi bi-instagram"></i> Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Ewerton-luiz-e-silva" target="_blank">
+                                <i class="bi bi-github"></i> GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:ewerton.luiz_1994@hotmail.com?subject=E-mail" target="_blank">
+                                <i class="bi bi-envelope"></i> Enviar Email
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/ewerton-luiz-e-silva-63b0a42b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+                                <i class="bi bi-linkedin"></i> LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-column credits-column">
+                <p>Ficarei feliz em saber mais sobre seus projetos e como podemos trabalhar juntos para torná-los realidade.</p>
+            </br>
+                <p>&copy; 2024 Todos os direitos reservados.</p>
+                <p> Desenvolvido Por Ewerton Luiz e Silva. </p>
+            </div>
+        </footer>
+        <!--Fim Footer-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Inicialização do AOS -->
+    <script>
+        AOS.init();
+    </script>
+
+    <!--JavaScript-->
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/actionButton.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/slideSobre.js"></script>
+    <script src="assets/js/slidePortfolio.js"></script>
+    <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+    
+
+</body>
+
+</html>
