@@ -338,12 +338,12 @@
     
     .imagens-case {
         width: 100%;
-        height: 35vh;
+        height: auto;
     }
 
     .textos-case {
         width: 100%;
-        height: 35vh;
+        height: auto;
     }
 
     .conteudo-textos-case p {
