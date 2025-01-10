@@ -939,7 +939,6 @@ a {
 }
 
 .titulo {
-    color: var(--color-black);
     width: 100%;
     font-size: 5vw;
     font-weight: lighter;
