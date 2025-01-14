@@ -386,23 +386,48 @@
                 <div class="portfolio-item projetos-ebac">
                 <h2>Projetos EBAC</h2>
                 <div class="gallery">
-                    <img src="/assets/img/Projetos EBAC/0 (1).png" alt="">
-                    <img src="/assets/img/Projetos EBAC/0 (2).png" alt="">
-                    <img src="/assets/img/Projetos EBAC/0 (3).png" alt="">
-                    <img src="/assets/img/Projetos EBAC/0 (4).png" alt="">
-                    <img src="/assets/img/Projetos EBAC/0 (5).png" alt="">
-                    <img src="/assets/img/Projetos EBAC/0 (6).png" alt="">
-                    <img src="/assets/img/Projetos EBAC/1 (1).png" alt="">
-                    <img src="/assets/img/Projetos EBAC/1 (2).png" alt="">
-                    <img src="/assets/img/Projetos EBAC/2 (1).png" alt="">
-                    <img src="/assets/img/Projetos EBAC/2 (2).png" alt="">
-                    <img src="/assets/img/Projetos EBAC/3.png" alt="">
-                    <img src="/assets/img/Projetos EBAC/4.png" alt="">
-                    <img src="/assets/img/Projetos EBAC/5.png" alt="">
-                    <img src="/assets/img/Projetos EBAC/6.png" alt="">
-                    <img src="/assets/img/Projetos EBAC/7.png" alt="">
-                    <img src="/assets/img/Projetos EBAC/8.png" alt="">
-                    <!-- Mais imagens aqui -->
+
+                    <!-- Inicio de Cards -->
+                    <section class="card-section">
+
+                        <!-- Cards 01 -->
+                            <div class="card">
+                                <h3>Projeto 1</h3>
+                                <img src="./assets/img/Projetos EBAC/0 (1).png" alt="Imagem do Projeto 1">
+                                <button class="btn" onclick="openModal(1)">Saiba +</button>
+                            </div>
+                        <!-- cardes para modular depois -->
+                        <!-- Cards 
+                            <div class="card">
+                                <h3>Projeto 2</h3>
+                                <img src="./0 (3).png" alt="Imagem do Projeto 2">
+                                <button class="btn" onclick="openModal(2)">Saiba +</button>
+                            </div>02 -->
+                        
+                        <!-- Cards 
+                            <div class="card">
+                                <h3>Projeto 3</h3>
+                                <img src="./0 (3).png" alt="Imagem do Projeto 2">
+                                <button class="btn" onclick="openModal(3)">Saiba +</button>
+                            </div>03 -->
+                        
+                        <!-- Cards 
+                            <div class="card">
+                                <h3>Projeto 4</h3>
+                                <img src="./0 (3).png" alt="Imagem do Projeto 2">
+                                <button class="btn" onclick="openModal(4)">Saiba +</button>
+                            </div>04 -->
+
+                        <!-- Cards 
+                            <div class="card">
+                                <h3>Projeto 5</h3>
+                                <img src="./0 (3).png" alt="Imagem do Projeto 2">
+                                <button class="btn" onclick="openModal(5)">Saiba +</button>
+                            </div>05 -->
+                        
+                        </section>
+                            <!-- Fim de Cards -->
+
                 </div>
                 </div>
                 <div class="portfolio-item projetos-pessoais">
@@ -526,6 +551,254 @@
             </div>
         </footer>
         <!--Fim Footer-->
+
+                                    <!--  Inicio de Modals -->
+                            
+                            <!-- Modals 01 -->
+                            <div id="modal-1" class="modal">
+                                <div class="modal-content">
+                                    <button class="close-btn" onclick="closeModal(1)">×</button>
+                                    <div id="loading-1" class="loading">Carregando...</div>
+                        
+                                    <div id="carousel-1" class="carousel" style="display: none;">
+                                        <div class="carrossel-container">
+                                            <div class="carrossel">
+                                                <img src="./assets/img/Projetos EBAC/0 (1).png" alt="Imagem 1">
+                                                <img src="./assets/img/Projetos EBAC/0 (2).png" alt="Imagem 2">
+                                                <img src="./assets/img/Projetos EBAC/0 (3).png" alt="Imagem 3">
+                                                <img src="./assets/img/Projetos EBAC/0 (4).png" alt="Imagem 4">
+                                                <img src="./assets/img/Projetos EBAC/0 (5).png" alt="Imagem 5">
+                                                <img src="./assets/img/Projetos EBAC/0 (6).png" alt="Imagem 6">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="imagens-container">
+                                            <img src="./assets/img/Projetos EBAC/0 (1).png" alt="Imagem 1" onclick="mudarImagem(0)">
+                                            <img src="./assets/img/Projetos EBAC/0 (2).png" alt="Imagem 2" onclick="mudarImagem(1)">
+                                            <img src="./assets/img/Projetos EBAC/0 (3).png" alt="Imagem 3" onclick="mudarImagem(2)">
+                                            <img src="./assets/img/Projetos EBAC/0 (4).png" alt="Imagem 4" onclick="mudarImagem(3)">
+                                            <img src="./assets/img/Projetos EBAC/0 (5).png" alt="Imagem 5" onclick="mudarImagem(4)">
+                                            <img src="./assets/img/Projetos EBAC/0 (6).png" alt="Imagem 6" onclick="mudarImagem(5)">
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="btn-descricao" onclick="toggleDescription(1)">Abrir Descrição</button>
+                                    <div id="description-1" class="description">
+                                        <div class="description-content">
+                                            <h2>Nome do Projeto: Salão</h2>
+                                            <p><strong>Data de Criação:</strong> 01 de Janeiro de 2025</p>
+                                            <p><strong>Tecnologias Usadas:</strong> HTML, CSS, JavaScript, Bootstrap</p>
+                                            <p><strong>Finalidade do Projeto:</strong> Criar uma plataforma interativa para educação online.</p>
+                                            <p><strong>Como Cada Tecnologia Foi Usada:</strong></p>
+                                            <ul>
+                                                <li><strong>HTML:</strong> Estruturação da página e conteúdo semântico.</li>
+                                                <li><strong>CSS:</strong> Estilização visual, incluindo layout responsivo e animações.</li>
+                                                <li><strong>JavaScript:</strong> Interatividade e manipulação dinâmica do conteúdo.</li>
+                                                <li><strong>Bootstrap:</strong> Framework para garantir o design responsivo e componentes prontos.</li>
+                                            </ul>
+                                            <p><strong>Links:</strong></p>
+                                            <ul>
+                                                <li>
+                                                    <a href="https://exercicio-projeto3-self.vercel.app" target="_blank">
+                                                        <i class="bi bi-cloud-check"></i> Deploy do Projeto
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://github.com/Ewerton-luiz-e-silva/exercicio-Projeto3/tree/main" target="_blank">
+                                                        <i class="bi bi-github"></i> Repositório GitHub
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- Modals 02 -->
+                            <div id="modal-2" class="modal">
+                                <div class="modal-content">
+                                    <button class="close-btn" onclick="closeModal(2)">×</button>
+                                    <div id="loading-2" class="loading">Carregando...</div>
+                        
+                                    <div id="carousel-2" class="carousel" style="display: none;">
+                                        <div class="carrossel-container">
+                                            <div class="carrossel">
+                                                <img src="https://www.designi.com.br/images/preview/10665323.jpg" alt="Imagem 1">
+                                                <img src="https://www.designi.com.br/images/preview/10665324.jpg" alt="Imagem 2">
+                                                <img src="https://th.bing.com/th/id/OIP.Sjjq-hqdEM28dvXd5Y0LmAHaHa?dpr=2&pid=ImgDetMain" alt="Imagem 3">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="imagens-container">
+                                            <img src="https://www.designi.com.br/images/preview/10665323.jpg" alt="Imagem 1" onclick="mudarImagem(0)">
+                                            <img src="https://www.designi.com.br/images/preview/10665324.jpg" alt="Imagem 2" onclick="mudarImagem(1)">
+                                            <img src="https://th.bing.com/th/id/OIP.Sjjq-hqdEM28dvXd5Y0LmAHaHa?dpr=2&pid=ImgDetMain" alt="Imagem 3" onclick="mudarImagem(2)">
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="btn-descricao" onclick="toggleDescription(2)">Abrir Descrição</button>
+                                    <div id="description-2" class="description">
+                                        <div class="description-content">
+                                            <h2>Nome do Projeto: Salão 2</h2>
+                                            <p><strong>Data de Criação:</strong> 01 de Janeiro de 2025</p>
+                                            <p><strong>Tecnologias Usadas:</strong> HTML, CSS, JavaScript, Bootstrap</p>
+                                            <p><strong>Finalidade do Projeto:</strong> Criar uma plataforma interativa para educação online.</p>
+                                            <p><strong>Como Cada Tecnologia Foi Usada:</strong></p>
+                                            <ul>
+                                            <li><strong>HTML:</strong> Estruturação da página e conteúdo semântico.</li>
+                                            <li><strong>CSS:</strong> Estilização visual, incluindo layout responsivo e animações.</li>
+                                            <li><strong>JavaScript:</strong> Interatividade e manipulação dinâmica do conteúdo.</li>
+                                            <li><strong>Bootstrap:</strong> Framework para garantir o design responsivo e componentes prontos.</li>
+                                            </ul>
+                                            <p><strong>Links:</strong></p>
+                                            <ul>
+                                            <li><a href="https://meuprojeto.com" target="_blank">Deploy do Projeto</a></li>
+                                            <li><a href="https://github.com/usuario/repo" target="_blank">Repositório GitHub</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- Modals 03 -->
+                            <div id="modal-3" class="modal">
+                                <div class="modal-content">
+                                    <button class="close-btn" onclick="closeModal(3)">×</button>
+                                    <div id="loading-3" class="loading">Carregando...</div>
+                        
+                                    <div id="carousel-3" class="carousel" style="display: none;">
+                                        <div class="carrossel-container">
+                                            <div class="carrossel">
+                                                <img src="https://www.designi.com.br/images/preview/10665323.jpg" alt="Imagem 1">
+                                                <img src="https://www.designi.com.br/images/preview/10665324.jpg" alt="Imagem 2">
+                                                <img src="https://th.bing.com/th/id/OIP.Sjjq-hqdEM28dvXd5Y0LmAHaHa?dpr=2&pid=ImgDetMain" alt="Imagem 3">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="imagens-container">
+                                            <img src="https://www.designi.com.br/images/preview/10665323.jpg" alt="Imagem 1" onclick="mudarImagem(0)">
+                                            <img src="https://www.designi.com.br/images/preview/10665324.jpg" alt="Imagem 2" onclick="mudarImagem(1)">
+                                            <img src="https://th.bing.com/th/id/OIP.Sjjq-hqdEM28dvXd5Y0LmAHaHa?dpr=2&pid=ImgDetMain" alt="Imagem 3" onclick="mudarImagem(2)">
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="btn-descricao" onclick="toggleDescription(3)">Abrir Descrição</button>
+                                    <div id="description-3" class="description">
+                                        <div class="description-content">
+                                            <h2>Nome do Projeto: Salão 3</h2>
+                                            <p><strong>Data de Criação:</strong> 01 de Janeiro de 2025</p>
+                                            <p><strong>Tecnologias Usadas:</strong> HTML, CSS, JavaScript, Bootstrap</p>
+                                            <p><strong>Finalidade do Projeto:</strong> Criar uma plataforma interativa para educação online.</p>
+                                            <p><strong>Como Cada Tecnologia Foi Usada:</strong></p>
+                                            <ul>
+                                            <li><strong>HTML:</strong> Estruturação da página e conteúdo semântico.</li>
+                                            <li><strong>CSS:</strong> Estilização visual, incluindo layout responsivo e animações.</li>
+                                            <li><strong>JavaScript:</strong> Interatividade e manipulação dinâmica do conteúdo.</li>
+                                            <li><strong>Bootstrap:</strong> Framework para garantir o design responsivo e componentes prontos.</li>
+                                            </ul>
+                                            <p><strong>Links:</strong></p>
+                                            <ul>
+                                            <li><a href="https://meuprojeto.com" target="_blank">Deploy do Projeto</a></li>
+                                            <li><a href="https://github.com/usuario/repo" target="_blank">Repositório GitHub</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- Modals 04 -->
+                            <div id="modal-4" class="modal">
+                                <div class="modal-content">
+                                    <button class="close-btn" onclick="closeModal(4)">×</button>
+                                    <div id="loading-4" class="loading">Carregando...</div>
+                        
+                                    <div id="carousel-4" class="carousel" style="display: none;">
+                                        <div class="carrossel-container">
+                                            <div class="carrossel">
+                                                <img src="https://www.designi.com.br/images/preview/10665323.jpg" alt="Imagem 1">
+                                                <img src="https://www.designi.com.br/images/preview/10665324.jpg" alt="Imagem 2">
+                                                <img src="https://th.bing.com/th/id/OIP.Sjjq-hqdEM28dvXd5Y0LmAHaHa?dpr=2&pid=ImgDetMain" alt="Imagem 3">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="imagens-container">
+                                            <img src="https://www.designi.com.br/images/preview/10665323.jpg" alt="Imagem 1" onclick="mudarImagem(0)">
+                                            <img src="https://www.designi.com.br/images/preview/10665324.jpg" alt="Imagem 2" onclick="mudarImagem(1)">
+                                            <img src="https://th.bing.com/th/id/OIP.Sjjq-hqdEM28dvXd5Y0LmAHaHa?dpr=2&pid=ImgDetMain" alt="Imagem 3" onclick="mudarImagem(2)">
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="btn-descricao" onclick="toggleDescription(4)">Abrir Descrição</button>
+                                    <div id="description-4" class="description">
+                                        <div class="description-content">
+                                            <h2>Nome do Projeto: Salão 4</h2>
+                                            <p><strong>Data de Criação:</strong> 01 de Janeiro de 2025</p>
+                                            <p><strong>Tecnologias Usadas:</strong> HTML, CSS, JavaScript, Bootstrap</p>
+                                            <p><strong>Finalidade do Projeto:</strong> Criar uma plataforma interativa para educação online.</p>
+                                            <p><strong>Como Cada Tecnologia Foi Usada:</strong></p>
+                                            <ul>
+                                            <li><strong>HTML:</strong> Estruturação da página e conteúdo semântico.</li>
+                                            <li><strong>CSS:</strong> Estilização visual, incluindo layout responsivo e animações.</li>
+                                            <li><strong>JavaScript:</strong> Interatividade e manipulação dinâmica do conteúdo.</li>
+                                            <li><strong>Bootstrap:</strong> Framework para garantir o design responsivo e componentes prontos.</li>
+                                            </ul>
+                                            <p><strong>Links:</strong></p>
+                                            <ul>
+                                            <li><a href="https://meuprojeto.com" target="_blank">Deploy do Projeto</a></li>
+                                            <li><a href="https://github.com/usuario/repo" target="_blank">Repositório GitHub</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- Modals 05 -->
+                            <div id="modal-5" class="modal">
+                                <div class="modal-content">
+                                    <button class="close-btn" onclick="closeModal(5)">×</button>
+                                    <div id="loading-5" class="loading">Carregando...</div>
+                        
+                                    <div id="carousel-5" class="carousel" style="display: none;">
+                                        <div class="carrossel-container">
+                                            <div class="carrossel">
+                                                <img src="https://www.designi.com.br/images/preview/10665323.jpg" alt="Imagem 1">
+                                                <img src="https://www.designi.com.br/images/preview/10665324.jpg" alt="Imagem 2">
+                                                <img src="https://th.bing.com/th/id/OIP.Sjjq-hqdEM28dvXd5Y0LmAHaHa?dpr=2&pid=ImgDetMain" alt="Imagem 3">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="imagens-container">
+                                            <img src="https://www.designi.com.br/images/preview/10665323.jpg" alt="Imagem 1" onclick="mudarImagem(0)">
+                                            <img src="https://www.designi.com.br/images/preview/10665324.jpg" alt="Imagem 2" onclick="mudarImagem(1)">
+                                            <img src="https://th.bing.com/th/id/OIP.Sjjq-hqdEM28dvXd5Y0LmAHaHa?dpr=2&pid=ImgDetMain" alt="Imagem 3" onclick="mudarImagem(2)">
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="btn-descricao" onclick="toggleDescription(5)">Abrir Descrição</button>
+                                    <div id="description-5" class="description">
+                                        <div class="description-content">
+                                            <h2>Nome do Projeto: Salão 5</h2>
+                                            <p><strong>Data de Criação:</strong> 01 de Janeiro de 2025</p>
+                                            <p><strong>Tecnologias Usadas:</strong> HTML, CSS, JavaScript, Bootstrap</p>
+                                            <p><strong>Finalidade do Projeto:</strong> Criar uma plataforma interativa para educação online.</p>
+                                            <p><strong>Como Cada Tecnologia Foi Usada:</strong></p>
+                                            <ul>
+                                            <li><strong>HTML:</strong> Estruturação da página e conteúdo semântico.</li>
+                                            <li><strong>CSS:</strong> Estilização visual, incluindo layout responsivo e animações.</li>
+                                            <li><strong>JavaScript:</strong> Interatividade e manipulação dinâmica do conteúdo.</li>
+                                            <li><strong>Bootstrap:</strong> Framework para garantir o design responsivo e componentes prontos.</li>
+                                            </ul>
+                                            <p><strong>Links:</strong></p>
+                                            <ul>
+                                            <li><a href="https://meuprojeto.com" target="_blank">Deploy do Projeto</a></li>
+                                            <li><a href="https://github.com/usuario/repo" target="_blank">Repositório GitHub</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            <!--  Fim de Modals -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 

@@ -939,7 +939,6 @@ a {
 }
 
 .titulo {
-    color: var(--color-black);
     width: 100%;
     font-size: 5vw;
     font-weight: lighter;
@@ -1266,4 +1265,385 @@ body.dark-mode {
 
 .theme-btn:hover {
     background-color: var(--color-destaque1);
+}
+
+.card-section {
+    display: flex;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    margin: 8px;
+    text-align: center;
+    width: 300px;
+    height: auto;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-descricao {
+    position: absolute; /* Define o botão como posicionado em relação ao elemento pai */
+    top: 0px; /* Ajuste a distância do topo conforme necessário */
+    left: 0px; /* Posiciona o botão a 10px do lado direito */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Garante que o botão esteja acima de outros elementos */
+}
+
+.btn-descricao:hover {
+    background-color: #0056b3;
+}
+
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000000;
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal-content {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 100%;
+    max-width: auto;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Loading animation */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Tela cheia para centralizar */
+    font-size: 2rem; /* Tamanho da fonte */
+    color: #007bff;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Description panel */
+.description {
+    position: absolute;
+    right: -3000px;
+    top: 0px;
+    width: 400px;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.9);
+    border-radius: 10px; /* Cinza com 50% de transparência */
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    color: #fff;
+    z-index: 10000;
+}
+
+.description.open {
+    right: -0px;
+}
+
+.close-btn {
+    background-color: #fff;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.close-btn:hover {
+    background-color: #000;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #fff;
+}
+
+
+/*Carrossel*/
+.carrossel-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carrossel {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrossel img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagens-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.imagens-container img {
+    margin-bottom: 25px;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imagens-container img:hover {
+    transform: translateY(-15px);  /* Ajustando o "pulo" da imagem */
+    opacity: 1;
+}
+
+/* Efeito de destaque para a miniatura selecionada */
+.imagens-container img.selected {
+    border: 3px solid #ff5733;
+    opacity: 1;
+    transform: scale(1.1);  /* Efeito de aumento ao selecionar */
+}
+
+/* Efeito de "saltar" quando a miniatura é clicada */
+.imagens-container img.clicked {
+    animation: bounce 0.6s ease;
+}
+
+/* Animação de salto */
+@keyframes bounce {
+    0% {
+    transform: scale(1);
+    }
+    50% {
+    transform: scale(1.2);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+
+
+
+/*Description*/ 
+.description-content {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.description-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.description-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.description-content p strong {
+    color: #444;
+}
+
+.description-content ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.description-content ul li {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.description-content ul li strong {
+    color: #007bff;
+}
+
+.description-content a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.description-content a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .description-content {
+        padding: 20px;
+    }
+
+    .description-content h2 {
+        font-size: 22px;
+    }
+
+    .description-content p {
+        font-size: 14px;
+    }
+
+    .description-content ul li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card-section {
+        flex-direction: column; /* Organiza os cards em coluna */
+        align-items: center;
+    }
+
+    .card {
+        width: 100%; /* Cards ocupam toda a largura disponível */
+        margin: 10px 0;
+    }
+
+    .btn {
+        width: 100%; /* Botões ocupam toda a largura */
+        padding: 12px;
+    }
+
+    .modal-content {
+        width: 90%; /* Modal ocupa 90% da largura */
+        max-width: 600px;
+    }
+
+    .description {
+        width: 100%;
+        right: -100%;
+    }
+
+    .description.open {
+        right: 0;
+    }
+
+    .imagens-container img {
+        width: 60px; /* Miniaturas menores */
+        height: 60px;
+    }
+
+    .description-content {
+        padding: 20px;
+    }
+
+    .description-content h2 {
+        font-size: 20px;
+    }
+
+    .description-content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-section {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .description {
+        width: 100%;
+        right: -100%;
+    }
+
+    .description.open {
+        right: 0;
+    }
+
+    .imagens-container img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .description-content h2 {
+        font-size: 18px;
+    }
+
+    .description-content p {
+        font-size: 12px;
+    }
 }
