@@ -1569,35 +1569,53 @@ body.dark-mode {
     .card {
         width: 100%; /* Cards ocupam toda a largura disponível */
         margin: 10px 0;
+        font-size: 30px;
+    }
+
+    .card h3 {
+        padding: 8px;
     }
 
     .btn {
         width: 100%; /* Botões ocupam toda a largura */
-        padding: 12px;
+        padding: 10px;
+        font-size: 25px;
+    }
+
+    .btn-descricao {
+        top: 5px;
+        left: 5px;
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .close-btn {
+        font-size: 35px;
+        padding: 5px;
     }
 
     .modal-content {
-        width: 90%; /* Modal ocupa 90% da largura */
-        max-width: 600px;
+        width: 100%; /* Modal ocupa 90% da largura */
+        height: 70%;
     }
 
     .description {
         width: 100%;
+        height: auto;
         right: -100%;
+        top: 70px;
     }
 
     .description.open {
         right: 0;
+        top: 70px;
     }
 
     .imagens-container img {
-        width: 60px; /* Miniaturas menores */
-        height: 60px;
+        width: 100px; /* Miniaturas menores */
+        height: 100px;
     }
 
-    .description-content {
-        padding: 20px;
-    }
 
     .description-content h2 {
         font-size: 20px;
@@ -1623,15 +1641,19 @@ body.dark-mode {
 
     .modal-content {
         width: 100%;
+        height: 70%;
     }
 
     .description {
         width: 100%;
+        height: auto;
         right: -100%;
+        top: 60px;
     }
 
     .description.open {
         right: 0;
+        top: 60px;
     }
 
     .imagens-container img {
@@ -1645,5 +1667,23 @@ body.dark-mode {
 
     .description-content p {
         font-size: 12px;
+    }
+
+    .carrossel img {
+        width: 100%;
+        height: 100%;
+        margin-top: 35%;
+    }
+
+    .description-content h2 {
+        font-size: 25px;
+    }
+    
+    .description-content p {
+        font-size: 19px;
+    }
+    
+    .description-content ul li {
+        font-size: 18px;
     }
 }
