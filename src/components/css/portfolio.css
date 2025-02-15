@@ -1,0 +1,377 @@
+/*************** PORTFOLIO *****/
+/* Estilos gerais */
+.portfolio {
+    padding: 2rem;
+    background-color: var(--color-background); /* Cor de fundo do body */
+    border: solid 5px var(--color-border); /* Cor da borda */
+    border-radius: 25px;
+    margin: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container-portfolio {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.headline-portfolio {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    color: var(--color-text); /* Cor do texto */
+    margin-bottom: 0.5rem;
+}
+
+.descricao {
+    font-size: 1rem;
+    color: var(--color-text-secondary); /* Cor do texto secundário */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+p {
+    font-size: 25px;
+    color: var(--color-text-secondary); /* Cor do texto secundário */
+}
+
+/* Abas */
+.portfolio-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    margin: 0 0.5rem;
+    border: none;
+    background-color: var(--color-tab-bg); /* Cor de fundo das abas */
+    color: var(--color-tab-text); /* Cor do texto das abas */
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tab-btn.active {
+    background-color: #000; /* Cor de fundo da aba ativa */
+    color: #fff; /* Cor do texto da aba ativa */
+    transform: scale(1.05);
+}
+
+.tab-btn:hover {
+    background-color: #434141; /* Cor de fundo da aba ativa */
+    color: #fff; /* Cor do texto da aba ativa */
+    transform: translateY(-2px);
+}
+
+/* Conteúdo do Portfólio */
+.portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.portfolio-item {
+    width: 100%;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.0rem;
+    justify-content: center;
+}
+
+/* Cards */
+.card {
+    background-color: var(--color-card-bg); /* Cor de fundo dos cards */
+    border-radius: 5px;
+    padding: 1px; /* Reduzi o padding para economizar espaço */
+    width: 180px; /* Largura menor para os cards */
+    height: auto; /* Altura automática para se ajustar ao conteúdo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* Espaçamento menor entre os elementos */
+    border: solid 2px transparent;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito de hover mais sutil */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%; /* Imagem menor */
+    height: 100px; /* Altura fixa para a imagem */
+    border-radius: 5px;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    margin-bottom: 0.20rem; /* Espaçamento menor abaixo da imagem */
+}
+
+.card h3 {
+    font-size: 0.9rem; /* Fonte menor para o título */
+    margin: 0;
+    color: var(--color-text); /* Cor do texto */
+    font-weight: 600; /* Texto em negrito para destacar */
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
+    max-width: 100%; /* Garante que o título não ultrapasse o card */
+}
+
+.card .btn {
+    display: block;
+    width: 100%;
+    padding: 0.5rem; /* Botão menor */
+    background-color: var(--color-btn-bg); /* Cor de fundo do botão */
+    color: var(--color-btn-text); /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 0.8rem; /* Fonte menor para o botão */
+    font-weight: 500;
+    text-decoration: none;
+    border: solid 3px transparent;
+}
+
+
+/* Estilos específicos para a galeria de certificados */
+.certificado-item {
+    background-color: var(--color-card-bg); /* Cor de fundo dos certificados */
+    border: 1px solid var(--color-border); /* Cor da borda */
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: calc(33.333% - 1rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.certificado-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.certificado-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.certificado-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--color-text); /* Cor do texto */
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal-content {
+    background-color: var(--color-modal-bg); /* Cor de fundo do modal */
+    padding: 10px;
+    border-radius: 15px;
+    width: 100%;
+    max-height: auto;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #fff; /* Cor do texto */
+}
+
+.modal-content .btn {
+    margin-top: 0px;
+    padding: 0.20rem 1.5rem;
+    background-color: var(--color-btn-bg); /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: solid 3px #fff;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.carousel {
+    display: flex;
+    height: 620px;
+    gap: 1rem;
+    margin-bottom: 5px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+}
+
+.carousel img {
+    width: 100%;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Descrição do Projeto */
+.description-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100002;
+}
+
+.description-content {
+    background-color: #fff; /* Cor de fundo da descrição */
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.description-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--color-text); /* Cor do texto */
+}
+
+.description-content pre {
+    white-space: pre-wrap;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text); /* Cor do texto */
+}
+
+.description-content .btn {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-btn-bg); /* Cor de fundo do botão */
+    color: var(--color-btn-text); /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: solid 3px #000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .portfolio {
+        padding: 1rem;
+        margin: 10px;
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .descricao {
+        font-size: 15px;
+        max-width: 90%;
+    }
+
+    .portfolio-tabs {
+        flex-wrap: wrap;
+        gap: 0.3rem;
+    }
+
+    .tab-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .portfolio-content {
+        gap: 1rem;
+    }
+
+    .card {
+        width: 150px;
+    }
+
+    .card img {
+        height: 80px;
+    }
+
+    .card h3 {
+        font-size: 0.8rem;
+    }
+
+    .card .btn {
+        font-size: 0.7rem;
+        padding: 0.4rem;
+    }
+
+    .carousel {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.9rem;
+    }
+
+    .descricao {
+        font-size: 0.1rem;
+    }
+
+    .card {
+        width: 150px;
+    }
+
+    .card img {
+        height: 80px;
+    }
+
+    .card h3 {
+        font-size: 0.90rem;
+    }
+
+    .card .btn {
+        font-size: 0.70rem;
+        padding: 0.3rem;
+    }
+
+    .carousel {
+        height: 300px;
+    }
+}

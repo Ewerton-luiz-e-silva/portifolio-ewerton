@@ -1,0 +1,187 @@
+/*************** SERVIÇOS *************/
+
+.servicos {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background-color: var(--color-background); /* Cor de fundo do body */
+}
+
+.container-servicos {
+    background-color: var(--color-gray1);
+    max-width: 1400px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    padding: 2rem;
+}
+
+.headline-servicos {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.titulo-servicos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-servicos h1 {
+    color: var(--color-white);
+    font-size: clamp(2rem, 5vw, 5rem); /* Ajusta a fonte dependendo da largura */
+    font-family: var(--font-grande);
+    margin-right: 10px;
+}
+
+.gifs {
+    width: 70px;
+    height: 70px;
+    margin-top: -5px;
+}
+
+.descricao-servicos {
+    width: 100%;
+    color: var(--color-white);
+    font-size: 15px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.servicos-cards {
+    width: 95%;
+    color: var(--color-white);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 4rem 0rem;
+}
+
+.card-servicos-left,
+.card-servicos-right {
+    border: 1px solid var(--color-white);
+    max-width: 92%;
+    min-height: 100px;
+    border-radius: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 7%;
+    transition: all 0.3s ease;
+}
+
+.card-servicos-left {
+    margin-left: 5%;
+}
+
+.card-servicos-right {
+    margin-right: 5%;
+}
+
+.card-servicos-left:hover,
+.card-servicos-right:hover {
+    background-color: var(--color-hover);
+    transform: translateY(-10px); /* Esse movimento pode ser trocado por box-shadow */
+}
+
+.card-titulo {
+    width: 50%;
+    font-size: clamp(0.5rem, 0.7vw + 0.4rem, 2rem);
+    font-family: var(--font-pequena);
+    font-weight: normal;
+    text-align: left;
+}
+
+.card-icon {
+    width: 25%;
+    max-width: 180px;
+    height: 60px;
+    border: 1px solid var(--color-white);
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.card-icon:hover {
+    background-color: var(--color-hover);
+}
+
+.card-icon i {
+    font-size: 2rem;
+    color: var(--color-white);
+    margin-bottom: -7px;
+}
+
+.card-icon i:hover {
+    color: var(--color-accent);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .descricao-servicos {
+        font-size: 0.9rem;
+    }
+
+    .titulo-servicos h1 {
+        font-size: clamp(1.2rem, 3.5vw, 5.2rem);
+    }
+
+    .card-titulo {
+        font-size: 1rem;
+    }
+
+    .card-icon {
+        width: 25%;
+        max-width: 90px;
+        height: 40px;
+    }
+
+    .card-icon i {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .descricao-servicos {
+        font-size: 0.8rem;
+    }
+
+    .titulo-servicos h1 {
+        font-size: clamp(2rem, 3vw, 2rem);
+    }
+
+    .card-titulo {
+        font-size: 10px;
+    }
+
+    .card-icon {
+        width: 30%;
+        max-width: 70px;
+        height: 35px;
+    }
+
+    .card-icon i {
+        font-size: 1rem;
+    }
+}
