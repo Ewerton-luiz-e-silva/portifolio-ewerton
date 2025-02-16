@@ -42,9 +42,7 @@
 
 .titulo-servicos h1 {
     color: var(--color-white);
-    font-size: clamp(2rem, 5vw, 5rem); /* Ajusta a fonte dependendo da largura */
-    font-family: var(--font-grande);
-    margin-right: 10px;
+    font-size: 2rem;
 }
 
 .gifs {
@@ -168,7 +166,7 @@
     }
 
     .titulo-servicos h1 {
-        font-size: clamp(2rem, 3vw, 2rem);
+        font-size: 1.5rem;
     }
 
     .card-titulo {

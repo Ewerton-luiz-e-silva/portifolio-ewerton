@@ -2,7 +2,6 @@
 /* Estilos gerais */
 .portfolio {
     padding: 2rem;
-    background-color: var(--color-background); /* Cor de fundo do body */
     border: solid 5px var(--color-border); /* Cor da borda */
     border-radius: 25px;
     margin: 20px;
@@ -20,9 +19,9 @@
 }
 
 .titulo {
-    font-size: 2.5rem;
     color: var(--color-text); /* Cor do texto */
     margin-bottom: 0.5rem;
+    font-size: 2rem;
 }
 
 .descricao {
@@ -347,7 +346,7 @@ p {
 
 @media (max-width: 480px) {
     .titulo {
-        font-size: 1.9rem;
+        font-size: 1.5rem;
     }
 
     .descricao {
