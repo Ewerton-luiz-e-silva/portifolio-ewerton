@@ -1,6 +1,6 @@
 .skills {
     width: 100%;
-    padding: 5rem 1rem;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,6 +8,8 @@
 }
 
 .container-skills {
+    margin-left: 25px;
+    margin-right: 25px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -28,8 +30,8 @@
 }
 
 .gifs {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 }
 
 .text-headline-skills p {
@@ -37,6 +39,7 @@
     font-weight: 500;
     line-height: 1.4;
     max-width: 900px;
+    text-align: justify;
 }
 
 /* GRID RESPONSIVO */
@@ -92,7 +95,6 @@
     }
 
     .container-skills {
-        margin-left: 5%;
         width: 100%;
     }
 
@@ -116,7 +118,6 @@
 
     
     .container-skills {
-        margin-left: 5%;
         width: 100%;
     }
 
