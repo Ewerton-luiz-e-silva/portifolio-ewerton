@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./css/contato.css"; // Importe o CSS correspondente
 import "./css/style.css";
 import "./css/clash-grotesk.css";
-
 import gifContatos from './img/Gif contato.gif';
 import imagemEmail from './img/email.png';
 
@@ -18,16 +17,19 @@ const Contato = () => {
     // Função para lidar com o envio do formulário
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        // Ativar o estado de carregamento
         setIsLoading(true);
+
+        // Definir a URL da API com base no ambiente
+        const API_URL = window.location.hostname === 'localhost'
+            ? 'http://localhost:3000' // URL local para desenvolvimento
+            : 'https://seu-projeto.vercel.app'; // URL do backend no Vercel
 
         // Dados do formulário
         const dadosFormulario = { nome, telefone, email, mensagem };
 
         try {
             // Enviar os dados para o backend
-            const response = await fetch('http://localhost:3000/submit', {
+            const response = await fetch(`${API_URL}/submit`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -36,7 +38,6 @@ const Contato = () => {
             });
 
             const result = await response.json();
-
             if (result.success) {
                 // Exibir alerta de sucesso
                 setAlert({ type: 'success', message: 'Formulário enviado com sucesso!' });
@@ -74,7 +75,6 @@ const Contato = () => {
                     </div>
                 </div>
             )}
-
             <div className="container-contato" data-aos="fade-up" data-aos-duration="1000">
                 {/* Título e Descrição */}
                 <div className="headline-contato" data-aos="fade-up" data-aos-delay="200">
@@ -108,7 +108,6 @@ const Contato = () => {
                         </ul>
                     </div>
                 </div>
-
                 {/* Formulário de Contato */}
                 <div className="conteudo-contato" data-aos="fade-up" data-aos-delay="400">
                     <div className="formulario-contato">
@@ -152,14 +151,12 @@ const Contato = () => {
                             </button>
                         </form>
                     </div>
-
                     {/* Logo de Contato */}
                     <div className="logo-contato" data-aos="fade-up" data-aos-delay="600">
                         <img src={imagemEmail} alt="Logo de Contato" />
                     </div>
                 </div>
             </div>
-
             {/* Alertas */}
             {alert && (
                 <div className={`alert ${alert.type}`}>
