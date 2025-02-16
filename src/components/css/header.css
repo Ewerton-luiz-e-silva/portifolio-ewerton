@@ -18,7 +18,7 @@
 
 /* Logo */
 .logo img {
-    margin-left: 60px;
+    margin-left: 60px; /* Margem para desktop */
     width: 50px;
 }
 
@@ -128,16 +128,37 @@
     transform: translateY(0);
 }
 
-/* RESPONSIVIDADE DO HEADER  */
+/* RESPONSIVIDADE DO HEADER */
 @media (max-width: 1024px) {
     .logo img {
-        margin-left: 55%;
+        margin-left: 0; /* Remove a margem esquerda */
         width: 35px;
+    }
+
+    .header {
+        justify-content: center; /* Centraliza os itens no header */
+    }
+
+    .menu {
+        display: none; /* Oculta o menu em telas menores */
     }
 }
 
 @media (max-width: 768px) {
     .menu-aberto.active {
         height: 100vh;
+    }
+
+    .logo img {
+        margin-left: 0; /* Remove a margem esquerda */
+        width: 35px;
+    }
+
+    .header {
+        justify-content: center; /* Centraliza os itens no header */
+    }
+
+    .menu {
+        display: none; /* Oculta o menu em telas menores */
     }
 }
