@@ -21,8 +21,5 @@
   "devDependencies": {
     "nodemon": "^3.0.2"
   },
-  "engines": {
-    "node": "18.x"               
-  },
   "description": "Servidor Node.js para o backend do projeto"
 }
