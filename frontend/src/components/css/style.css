@@ -1,0 +1,349 @@
+/******************** Fontes usadas */
+@import url('https://fonts.cdnfonts.com/css/tt-hoves-pro-trial');
+@import url('clash-grotesk.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-grande: 'TT Hoves Pro Trial', sans-serif;
+    --font-pequena: 'ClashGrotesk-Light', sans-serif;
+    --color-black: #000;
+    --color-gray1: #3d4143;
+    --color-gray2: #9c9d9d;
+    --color-white: #f6f6f6;
+    --color-destaque1: #ff9f43;
+    --color-destaque2: #a4b0be;
+}
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 3px solid var(--color-black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-gray2);
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    transition: transform 0.3s ease-out;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Ajuste final para o layout responsivo */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+
+/* Botões fixos */
+.fixed-button {
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease, box-shadow 0.5s ease;
+}
+
+#backToTop, #whatsappButton {
+    bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#backToTop {
+    font-size: 50px;
+    left: 20px;
+}
+
+#whatsappButton {
+    font-size: 46px;
+    right: 20px;
+    background-color: #25D366;
+    animation: pulse 2s infinite;
+}
+
+#whatsappButton i {
+    font-size: 46px;
+    color: #fff;
+}
+
+/* Animação de pulso */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
+    }
+}
+
+/* Tema */
+body {
+    background-color: #dfe4ea;
+    color: #2f3542;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #2f3542;
+    color: #ffffff;
+}
+
+/* Botão de alternar tema */
+.theme-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: var(--color-gray1);
+    color: var(--color-white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    z-index: 10000;
+}
+
+.theme-btn:hover {
+    background-color: var(--color-destaque1);
+}
+
+/* Cards */
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    margin: 8px;
+    text-align: center;
+    width: 300px;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Botões */
+.btn, .btn-descricao {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover, .btn-descricao:hover {
+    background-color: #0056b3;
+}
+
+.btn-descricao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000000;
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal-content {
+    position: relative;
+    margin: 25px auto 0;
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Loading */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2rem;
+    color: #007bff;
+    animation: pulse 1.5s infinite;
+}
+
+/* Descrição */
+.description {
+    position: absolute;
+    right: -3000px;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    color: #fff;
+    z-index: 10000;
+}
+
+.description.open {
+    right: 0;
+}
+
+.close-btn {
+    background-color: #fff;
+    border-radius: 10px;
+    color: #000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.close-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Carrossel */
+.carrossel-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carrossel {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrossel img {
+    border-radius: 10px;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+/* Miniaturas */
+.imagens-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.imagens-container img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: transform 0.3s, opacity 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imagens-container img:hover, .imagens-container img.selected {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+#p-descricao{
+    font-size: 15px;
+    text-align: justify;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .card-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card, .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .description-content {
+        padding: 20px;
+    }
+}
