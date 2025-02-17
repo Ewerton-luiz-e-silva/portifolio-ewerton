@@ -3,12 +3,23 @@
         {
             "src": "backend/server.js",
             "use": "@vercel/node"
+        },
+        {
+            "src": "package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "dist"
+            }
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
             "dest": "backend/server.js"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "dist/index.html"
         }
     ]
 }
