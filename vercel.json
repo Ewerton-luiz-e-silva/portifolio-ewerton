@@ -19,7 +19,7 @@
         },
         {
             "src": "(.*)",
-            "dest": "app.jsx"
+            "dest": "frontend/app.jsx"
         }
     ]
 }
