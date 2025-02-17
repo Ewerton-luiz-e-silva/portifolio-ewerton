@@ -11,11 +11,11 @@
     ],
     "routes": [
     {
-        "src": "/(.*)",
+        "src": "(.*)",
         "dest": "backend/server.js"
     },
     {
-        "src": "/(.*)",
+        "src": "(.*)",
         "dest": "/index.html"
     }
 ]
