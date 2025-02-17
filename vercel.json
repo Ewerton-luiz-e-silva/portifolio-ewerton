@@ -18,7 +18,7 @@
             "dest": "frontend/dist/index.html"
         },
         {
-            "src": "/(.*)",
+            "src": "/api/(.*)",
             "dest": "backend/server.js"
         }
     ]
