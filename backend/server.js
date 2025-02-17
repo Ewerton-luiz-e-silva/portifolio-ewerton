@@ -68,4 +68,7 @@ app.post('/submit', (req, res) => {
     });
 });
 
-module.exports = app;
+// Iniciar o servidor
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+});
