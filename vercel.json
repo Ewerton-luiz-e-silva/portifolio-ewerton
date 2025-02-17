@@ -14,11 +14,11 @@
     ],
     "routes": [
         {
-            "src": "(.*)",
+            "src": "/(.*)",
             "dest": "frontend/dist/index.html"
         },
         {
-            "src": "(.*)",
+            "src": "/(.*)",
             "dest": "backend/server.js"
         }
     ]
