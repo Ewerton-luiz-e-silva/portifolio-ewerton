@@ -15,7 +15,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "frontend/index.html"
+            "dest": "frontend/src/main.jsx"
         },
         {
             "src": "/(.*)",
