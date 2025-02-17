@@ -15,7 +15,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "frontend/dist/index.html"
+            "dest": "frontend/index.html"
         },
         {
             "src": "/(.*)",
