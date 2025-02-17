@@ -5,6 +5,7 @@ const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
@@ -20,8 +21,8 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-// Rota para receber os dados do formulário (com prefixo /api/)
-app.post('/api/submit', (req, res) => {
+// Rota para receber os dados do formulário
+app.post('/submit', (req, res) => {
     const { nome, telefone, email, mensagem } = req.body;
 
     // Validar os dados do formulário
@@ -67,5 +68,7 @@ app.post('/api/submit', (req, res) => {
     });
 });
 
-// Exportando o servidor para o Vercel
-module.exports = app;
+// Iniciar o servidor
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+});
