@@ -16,7 +16,7 @@
 .headline-portfolio {
     text-align: center;
     margin-bottom: 2rem;
-    text-align: left;
+    text-align: justify;
 }
 
 .titulo {
@@ -36,7 +36,7 @@
 p {
     font-size: 25px;
     color: var(--color-text-secondary); /* Cor do texto secundário */
-    text-align: center;
+    text-align: justify;
 }
 
 /* Abas */
