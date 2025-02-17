@@ -5,7 +5,7 @@
             "use": "@vercel/node"
         },
         {
-            "src": "frontend/package.json",
+            "src": "frontend/src/App.jsx",
             "use": "@vercel/static-build",
             "config": {
                 "distDir": "dist"
@@ -19,7 +19,7 @@
         },
         {
             "src": "(.*)",
-            "dest": "frontend/app.jsx"
+            "dest": "frontend/src/App.jsx"
         }
     ]
 }
