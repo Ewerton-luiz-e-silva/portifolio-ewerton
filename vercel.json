@@ -3,22 +3,12 @@
         {
             "src": "backend/server.js",
             "use": "@vercel/node"
-        },
-        {
-            "src": "frontend/src/App.jsx",
-            "config": {
-                "distDir": "dist"
-            }
         }
     ],
     "routes": [
         {
             "src": "/api/(.*)",
             "dest": "backend/server.js"
-        },
-        {
-            "src": "(.*)",
-            "dest": "frontend/src/App.jsx"
         }
     ]
 }
