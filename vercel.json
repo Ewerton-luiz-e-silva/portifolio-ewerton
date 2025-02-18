@@ -1,14 +1,14 @@
 {
     "builds": [
     {
-        "src": "backend/server.js",
+        "src": "backend/package.json",
         "use": "@vercel/node"
     },
     {
         "src": "package.json",
         "use": "@vercel/static-build",
         "config": {
-        "distDir": "dist"
+        "distDir": "frontend/dist"
         }
     }
     ],
@@ -18,7 +18,7 @@
         "dest": "backend/"
     },
     {
-        "src": "(.)",
+        "src": "/(.*)",
         "dest": "dist/index.html"
     }
     ]
