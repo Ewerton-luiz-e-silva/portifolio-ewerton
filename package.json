@@ -1,42 +1,32 @@
 {
-  "name": "meu-projeto",
-  "version": "1.0.0",
-  "main": "backend/server.js",
+  "name": "meu",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "node backend/server.js",   // Inicia o servidor backend
-    "dev": "concurrently \"npm run backend\" \"npm run frontend\"", // Roda o backend e o frontend ao mesmo tempo
-    "frontend": "vite --config frontend/vite.config.js",  // Roda o frontend com Vite
-    "backend": "node backend/server.js", // Roda o backend (server.js)
-    "build": "vite build",               // Compila o frontend (React)
-    "preview": "vite preview",           // Visualiza o build do frontend
+    "dev": "vite",
+    "build": "vite build",
     "lint": "eslint .",
-    "deploy": "vercel --prod"            // Comando de deploy no Vercel
+    "preview": "vite preview"
   },
   "dependencies": {
-    "body-parser": "^1.20.3",            // Backend
-    "cors": "^2.8.5",                    // Backend
-    "dotenv": "^16.4.7",                 // Backend
-    "express": "^4.21.2",                // Backend (também usado no frontend)
-    "nodemailer": "^6.10.0",             // Backend
-    "react": "^19.0.0",                  // Frontend
-    "react-dom": "^19.0.0",              // Frontend
-    "react-router-dom": "^7.1.5",        // Frontend
-    "aos": "^2.3.4",                     // Frontend
-    "bootstrap-icons": "^1.11.3",        // Frontend
-    "vite": "^6.1.0"                     // Frontend (build tool)
+    "aos": "^2.3.4",
+    "bootstrap-icons": "^1.11.3",
+    "express": "^4.21.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.5"
   },
   "devDependencies": {
-    "@eslint/js": "^9.19.0",             // Frontend
-    "@types/react": "^19.0.8",           // Frontend
-    "@types/react-dom": "^19.0.3",       // Frontend
-    "@vitejs/plugin-react": "^4.3.4",    // Frontend (Vite plugin)
-    "eslint": "^9.19.0",                 // Frontend
-    "eslint-plugin-react": "^7.37.4",    // Frontend
-    "eslint-plugin-react-hooks": "^5.0.0", // Frontend
-    "eslint-plugin-react-refresh": "^0.4.18", // Frontend
-    "globals": "^15.14.0",               // Frontend
-    "concurrently": "^7.0.0"             // Para rodar backend e frontend ao mesmo tempo
-  },
-  "description": "Projeto com Backend e Frontend combinados",
-  "license": "ISC"
+    "@eslint/js": "^9.19.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.19.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.18",
+    "globals": "^15.14.0",
+    "vite": "^6.1.0"
+  }
 }

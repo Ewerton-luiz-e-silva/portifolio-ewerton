@@ -5,22 +5,31 @@
         "use": "@vercel/node"
     },
     {
-        "src": "frontend/package.json",
+        "src": "package.json",
         "use": "@vercel/static-build",
         "config": {
-        "distDir": "frontend/dist"
+        "distDir": "dist"
         }
     }
     ],
     "routes": [
     {
-        "src": "/api/(.*)",
+        "src": "/api/(.)",
         "dest": "backend/server.js"
     },
     {
-        "src": "(.*)",
-        "dest": "frontend/dist/index.html"
+        "src": "(.)",
+        "dest": "dist/index.html"
+    },
+    {
+        "src": "/submit",
+        "methods": ["POST"],
+        "headers": {
+        "Access-Control-Allow-Origin": "https://portifolio-ewerton.vercel.app/",
+        "Access-Control-Allow-Methods": "POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+        },
+        "dest": "backend/server.js"
     }
     ]
 }
-
