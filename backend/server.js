@@ -7,8 +7,17 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Middleware
-app.use(cors({ origin: 'https://portifolio-ewerton.vercel.app/' }));
+// Middleware CORS - Permite requisições de qualquer origem
+app.use(cors({
+    origin: 'https://portifolio-ewerton.vercel.app', // Permite apenas seu front-end
+    methods: ['POST', 'OPTIONS'], // Permite apenas os métodos necessários
+    allowedHeaders: ['Content-Type']
+}));
+
+// Tratamento para requisições OPTIONS (Preflight)
+app.options('/submit', cors());
+
+// Middleware para interpretar JSON e dados de formulários
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -70,5 +79,5 @@ app.post('/submit', (req, res) => {
 
 // Iniciar o servidor
 app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`);
+    console.log(`Servidor rodando na porta  ${port}`);
 });
