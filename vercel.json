@@ -14,12 +14,22 @@
     ],
     "routes": [
     {
-        "src": "/api/(.*)",
-        "dest": "backend/"
+        "src": "/api/(.)",
+        "dest": "backend/server.js"
     },
     {
-        "src": "/(.*)",
+        "src": "(.)",
         "dest": "dist/index.html"
+    },
+    {
+        "src": "/submit",
+        "methods": ["POST"],
+        "headers": {
+        "Access-Control-Allow-Origin": "https://portifolio-ewerton.vercel.app/",
+        "Access-Control-Allow-Methods": "POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+        },
+        "dest": "backend/server.js"
     }
     ]
 }
