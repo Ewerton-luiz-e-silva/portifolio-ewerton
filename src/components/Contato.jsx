@@ -20,9 +20,7 @@ const Contato = () => {
         setIsLoading(true);
 
         // Definir a URL da API com base no ambiente
-        const API_URL = window.location.hostname === 'localhost'
-            ? 'http://localhost:3000' // URL local para desenvolvimento
-            : 'https://seu-projeto.vercel.app'; // URL do backend no Vercel
+        const API_URL = import.meta.env.VITE_API_URL;
 
         // Dados do formulário
         const dadosFormulario = { nome, telefone, email, mensagem };
