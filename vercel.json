@@ -24,5 +24,6 @@
             "src": "(.)",
             "dest": "dist/index.html"
         }
-    ]
+    ],
+    "devCommand": "concurrently \"cd backend && npm run dev\" \"npm run dev\""
 }
