@@ -1,35 +1,29 @@
 {
+    "version": 2,
     "builds": [
-    {
-        "src": "backend/server.js",
-        "use": "@vercel/node"
-    },
-    {
-        "src": "package.json",
-        "use": "@vercel/static-build",
-        "config": {
-        "distDir": "dist"
+        {
+            "src": "backend/server.js",
+            "use": "@vercel/node",
+            "config": { "includeFiles": ["backend/**"] }
+        },
+        {
+            "src": "package.json",
+            "use": "@vercel/static-build",
+            "config": { "distDir": "dist" }
         }
-    }
     ],
     "routes": [
-    {
-        "src": "/api/(.)",
-        "dest": "backend/server.js"
-    },
-    {
-        "src": "(.)",
-        "dest": "dist/index.html"
-    },
-    {
-        "src": "/submit",
-        "methods": ["POST"],
-        "headers": {
-        "Access-Control-Allow-Origin": "https://portifolio-ewerton.vercel.app/",
-        "Access-Control-Allow-Methods": "POST, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+        {
+            "src": "/submit",
+            "dest": "backend/server.js"
         },
-        "dest": "backend/server.js"
-    }
+        {
+            "src": "/api/(.*)",
+            "dest": "backend/server.js"
+        },
+        {
+            "src": "(.*)",
+            "dest": "dist/index.html"
+        }
     ]
 }
