@@ -145,9 +145,18 @@
 }
 
 @media (max-width: 768px) {
+    .inicio {
+        margin-top: 20px;
+    }
 
     .paragrafo-inicio p {
         width: 90%;
     }
 
+}
+
+@media (max-width: 480px) { /* Para dispositivos um pouco maiores */
+    .inicio {
+        margin-top: 26%;
+    }
 }

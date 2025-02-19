@@ -667,7 +667,7 @@ return (
         </span>
         <br/>
         <br/>
-        <p>Selecione uma opção abaixo para conhecer minhas qualificações, certificados e projetos.</p>
+        <p className="p-portfolio">Selecione uma opção abaixo para conhecer minhas qualificações, certificados e projetos.</p>
     </div>
 
     {/* Abas */}

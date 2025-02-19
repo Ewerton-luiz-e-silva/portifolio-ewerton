@@ -43,11 +43,14 @@
 
 .titulo-servicos h1 {
     color: var(--color-white);
-    font-size: 3rem;
-    font-family: var(--font-grande);
-    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
     letter-spacing: 2px;
-    margin: 0;
+    margin: 1rem;
     position: relative;
     background: linear-gradient(45deg, 
         var(--color-white) 30%,
@@ -58,8 +61,8 @@
 }
 
 .gifs {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     top: -40px;
     right: 0;
     opacity: 0.8;
@@ -74,14 +77,13 @@
     line-height: 1.6;
     position: relative;
     z-index: 2;
-    text-align: justify;
 }
 
 .servicos-cards {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 1rem;
     padding: 3rem 0;
 }
 

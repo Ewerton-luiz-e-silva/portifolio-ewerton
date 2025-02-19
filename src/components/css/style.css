@@ -17,6 +17,14 @@
     --color-white: #f6f6f6;
     --color-destaque1: #ff9f43;
     --color-destaque2: #a4b0be;
+    --primary-color: #2A2A72;
+    --secondary-color: #009FFD;
+    --accent-color: #FF0076;
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --border-radius: 15px;
+    --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilizando a barra de rolagem */
@@ -39,14 +47,15 @@
 }
 
 html, body {
-    width: 100vw;
-    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto; /* Garante que o scroll vertical funcione corretamente */
+    width: 100%;
+    height: auto;
+    min-height: 100vh; /* Garante que ocupe toda a altura da tela */
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    transition: transform 0.3s ease-out;
 }
+
 
 .container {
     width: 100%;
@@ -327,7 +336,6 @@ body.dark-mode {
 
 #p-descricao{
     font-size: 15px;
-    text-align: justify;
 }
 
 /* Responsividade */
@@ -345,5 +353,14 @@ body.dark-mode {
 @media (max-width: 768px) {
     .description-content {
         padding: 20px;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Para navegadores que não suportam `display: none` */
+    html, body {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer/Edge */
     }
 }
