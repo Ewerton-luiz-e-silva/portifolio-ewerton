@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "postinstall": "cd backend && npm install",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "postinstall": "cd backend && npm install"
+    "preview": "vite preview"
   },
   "dependencies": {
     "aos": "^2.3.4",
