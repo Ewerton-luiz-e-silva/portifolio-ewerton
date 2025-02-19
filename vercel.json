@@ -2,12 +2,12 @@
     "version": 2,
     "builds": [
         {
-            "src": "backend/server.js",
+            "src": "server.js",
             "use": "@vercel/node",
-            "config": { "includeFiles": ["backend/**"] }
+            "config": { "includeFiles": ["**"] }
         },
         {
-            "src": "package.json",
+            "src": "frontend/package.json",
             "use": "@vercel/static-build",
             "config": { "distDir": "dist" }
         }
@@ -15,15 +15,15 @@
     "routes": [
         {
             "src": "/submit",
-            "dest": "backend/server.js"
+            "dest": "server.js"
         },
         {
             "src": "/api/(.*)",
-            "dest": "backend/server.js"
+            "dest": "server.js"
         },
         {
             "src": "(.*)",
-            "dest": "dist/index.html"
+            "dest": "frontend/dist/index.html"
         }
     ]
 }
