@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            "src": "backend/package.json",
+            "src": "backend/server.js",
             "use": "@vercel/node"
         },
         {
@@ -24,6 +24,5 @@
             "src": "(.)",
             "dest": "dist/index.html"
         }
-    ],
-    "devCommand": "concurrently \"cd backend && npm run dev\" \"npm run dev\""
+    ]
 }
