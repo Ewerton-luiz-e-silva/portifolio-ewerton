@@ -2,7 +2,7 @@
 
 /* Estilos gerais */
 .portfolio {
-    padding: 2rem;
+    padding: rem;
     border-radius: 25px;
     margin: 20px;
     background: linear-gradient(to bottom, 
@@ -267,6 +267,7 @@
     justify-content: center;
     align-items: center;
     z-index: 100002;
+    color: #111;
 }
 
 .description-content {
