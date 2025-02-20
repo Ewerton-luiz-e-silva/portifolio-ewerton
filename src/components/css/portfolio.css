@@ -240,7 +240,7 @@
 
 .carousel {
     display: flex;
-    height: 620px;
+    height: 400px;
     gap: 1rem;
     margin-bottom: 5px;
     overflow-x: auto;
