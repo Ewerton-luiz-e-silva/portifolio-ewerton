@@ -309,6 +309,12 @@
     border: solid 3px #000;
 }
 
+@media screen and (max-width: 1024px) {
+    .carousel {
+        height: 300px;
+    }
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .portfolio {
