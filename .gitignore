@@ -1,3 +1,9 @@
+# Arquivos de ambiente
+.env
+
+# Dependências
+node_modules
+
 # Logs
 logs
 *.log
@@ -7,12 +13,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# Builds
 dist
 dist-ssr
 *.local
 
-# Editor directories and files
+# Configurações do editor
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -22,6 +28,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-.env
-.node_modules
