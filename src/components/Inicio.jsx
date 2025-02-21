@@ -36,7 +36,7 @@ return (
             </svg>
         </a>
         <a
-            href="./assets/Documento/Ewerton.pdf"
+            href="./doc/Modelo  Corriculo Ewerton.docx"
             className="cta curriculo"
             download
             data-aos="fade-up"

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Inicio from './components/Inicio';
 import Sobre from './components/Sobre';
+import Recomendacoes from './components/Recomendacoes';
 import Skills from './components/Skills';
 import Servicos from './components/Servicos';
 import FreeYourMind from './components/FreeYourMind';
@@ -42,6 +43,7 @@ function App() {
       <Header />
       <Inicio />
       <Sobre />
+      <Recomendacoes />
       <Skills />
       <Servicos />
       <FreeYourMind />
