@@ -652,7 +652,7 @@ const projetosPessoais = [
         * Gulp: Automação de tarefas como compilação do Sass, minificação de arquivos e otimização de desempenho.
         * AOS: Biblioteca utilizada para animar elementos à medida que o usuário rola a página, criando efeitos visuais atrativos.
     `,
-    deployLink: "https://deadpool-filme-j9id6q0i4-ewertons-projects-a9dff8dc.vercel.app/",  // Link do deploy
+    deployLink: "https://deadpool-filme.vercel.app/",  // Link do deploy
     githubLink: "https://github.com/Ewerton-luiz-e-silva/deadpool-filme"  // Link do GitHub
     },
 ];
