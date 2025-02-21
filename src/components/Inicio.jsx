@@ -37,7 +37,7 @@ return (
             </svg>
         </a>
         <a
-            href="/CorriculoEwerton.docx"
+            href={CorriculoEwerton}
             className="cta curriculo"
             download
             data-aos="fade-up"
