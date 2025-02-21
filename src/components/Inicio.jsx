@@ -2,7 +2,6 @@ import React from "react";
 import "./css/inicio.css"; // Importe o CSS correspondente
 import "./css/style.css";
 
-import CorriculoEwerton from '/doc/CorriculoEwerton.docx';
 
 const Inicio = () => {
 return (
@@ -37,7 +36,7 @@ return (
             </svg>
         </a>
         <a
-            href={CorriculoEwerton}
+            href="./doc/Modelo  Corriculo Ewerton.docx"
             className="cta curriculo"
             download
             data-aos="fade-up"
