@@ -6,27 +6,21 @@ import gifContatos from './img/Gif contato.gif';
 import imagemEmail from './img/email.png';
 
 const Contato = () => {
-    // Estados para os campos do formulário
     const [nome, setNome] = useState('');
     const [telefone, setTelefone] = useState('');
     const [email, setEmail] = useState('');
     const [mensagem, setMensagem] = useState('');
-    const [alert, setAlert] = useState(null); // Estado para o alerta
-    const [isLoading, setIsLoading] = useState(false); // Estado para o carregamento
+    const [alert, setAlert] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
 
-    // Função para lidar com o envio do formulário
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
 
-        // Definir a URL da API com base no ambiente
         const API_URL = import.meta.env.VITE_API_URL;
-
-        // Dados do formulário
         const dadosFormulario = { nome, telefone, email, mensagem };
 
         try {
-            // Enviar os dados para o backend
             const response = await fetch(`${API_URL}/submit`, {
                 method: 'POST',
                 headers: {
@@ -37,44 +31,37 @@ const Contato = () => {
 
             const result = await response.json();
             if (result.success) {
-                // Exibir alerta de sucesso
                 setAlert({ type: 'success', message: 'Formulário enviado com sucesso!' });
-                // Limpar os campos do formulário
                 setNome('');
                 setTelefone('');
                 setEmail('');
                 setMensagem('');
             } else {
-                // Exibir alerta de erro
                 setAlert({ type: 'error', message: 'Erro ao enviar o formulário. Tente novamente.' });
             }
         } catch (error) {
             console.error('Erro ao enviar o formulário:', error);
             setAlert({ type: 'error', message: 'Erro ao enviar o formulário. Tente novamente.' });
         } finally {
-            // Desativar o estado de carregamento
             setIsLoading(false);
         }
     };
 
-    // Função para fechar o alerta
     const closeAlert = () => {
         setAlert(null);
     };
 
     return (
         <section id="contato" className="contato">
-            {/* Tela de Carregamento */}
             {isLoading && (
                 <div className="loading-overlay">
                     <div className="loading-content">
                         <div className="loading-spinner"></div>
-                        <p>Enviando Formulário...</p> {/* Mensagem personalizada */}
+                        <p>Enviando Formulário...</p>
                     </div>
                 </div>
             )}
             <div className="container-contato" data-aos="fade-up" data-aos-duration="1000">
-                {/* Título e Descrição */}
                 <div className="headline-contato" data-aos="fade-up" data-aos-delay="200">
                     <div className="titulo-contato">
                         <h1>
@@ -106,7 +93,6 @@ const Contato = () => {
                         </ul>
                     </div>
                 </div>
-                {/* Formulário de Contato */}
                 <div className="conteudo-contato" data-aos="fade-up" data-aos-delay="400">
                     <div className="formulario-contato">
                         <h2>Entre em contato</h2>
@@ -149,13 +135,11 @@ const Contato = () => {
                             </button>
                         </form>
                     </div>
-                    {/* Logo de Contato */}
                     <div className="logo-contato" data-aos="fade-up" data-aos-delay="600">
                         <img src={imagemEmail} alt="Logo de Contato" />
                     </div>
                 </div>
             </div>
-            {/* Alertas */}
             {alert && (
                 <div className={`alert ${alert.type}`}>
                     <span className="icon">

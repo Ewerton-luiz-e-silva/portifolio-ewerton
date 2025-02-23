@@ -1,5 +1,7 @@
 /*************** SOBRE *****/
 .sobre {
+    width: 90%;
+    margin-left: 5%;
     background-color: var(--color-black);
     height: 100vh;
     display: flex;
@@ -11,7 +13,6 @@
     overflow: visible;
     border-radius: 50px;
     overflow: hidden;
-    width: 100%;
 }
 
 .container-sobre {
