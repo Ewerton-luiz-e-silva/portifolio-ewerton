@@ -161,9 +161,9 @@
 
 .alert {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 1rem;
+    top: 90px;
+    right: 35px;
+    padding: 2rem;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -182,12 +182,20 @@
 }
 
 .alert .close-btn {
-    background: none;
+    padding: 5px;
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
-    color: inherit;
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.alert .close-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
 
 /* Responsivo para telas menores */
 @media (max-width: 1024px) {
