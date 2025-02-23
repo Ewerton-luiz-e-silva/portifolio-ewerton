@@ -138,11 +138,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     z-index: 1000;
 }
 
 .loading-content {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre o spinner e o texto */
 }
 
 .loading-spinner {
@@ -158,6 +163,7 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
 
 .alert {
     position: fixed;
