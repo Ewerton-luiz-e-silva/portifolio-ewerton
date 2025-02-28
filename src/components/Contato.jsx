@@ -1,157 +1,128 @@
-import React, { useState } from "react";
-import "./css/contato.css"; // Importe o CSS correspondente
-import "./css/style.css";
-import "./css/clash-grotesk.css";
-import gifContatos from './img/Gif contato.gif';
-import imagemEmail from './img/email.png';
+import React, { useState, useEffect } from "react";
+import md5 from "md5"; // Biblioteca para gerar hash MD5 (Gravatar)
+import "./css/recomendacao.css";
 
-const Contato = () => {
-    const [nome, setNome] = useState('');
-    const [telefone, setTelefone] = useState('');
-    const [email, setEmail] = useState('');
-    const [mensagem, setMensagem] = useState('');
-    const [alert, setAlert] = useState(null);
-    const [isLoading, setIsLoading] = useState(false);
+const Recomendacao = () => {
+    const [modalAberto, setModalAberto] = useState(false);
+    const [nome, setNome] = useState("");
+    const [email, setEmail] = useState("");
+    const [texto, setTexto] = useState("");
+    const [recomendacoes, setRecomendacoes] = useState([]);
+
+    // URL do backend (usando a variável de ambiente VITE_API_URL ou fallback direto)
+    const BACKEND_URL = import.meta.env.VITE_API_URL || "https://server-rho-drab-55.vercel.app";
+
+    useEffect(() => {
+        // Buscar recomendações aprovadas do backend
+        fetch(`${BACKEND_URL}/recomendacoes`)
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error(`Erro HTTP: ${res.status}`);
+                }
+                return res.json();
+            })
+            .then((data) => setRecomendacoes(data))
+            .catch((error) => console.error("Erro ao buscar recomendações:", error));
+    }, [BACKEND_URL]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsLoading(true);
+        if (nome && email && texto && texto.length <= 200) {
+            const novaRecomendacao = { nome, email, texto };
 
-        const API_URL = import.meta.env.VITE_API_URL;
-        const dadosFormulario = { nome, telefone, email, mensagem };
+            try {
+                const response = await fetch(`${BACKEND_URL}/recomendacoes`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(novaRecomendacao),
+                });
 
-        try {
-            const response = await fetch(`${API_URL}/submit`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(dadosFormulario),
-            });
+                if (!response.ok) {
+                    throw new Error(`Erro HTTP: ${response.status}`);
+                }
 
-            const result = await response.json();
-            if (result.success) {
-                setAlert({ type: 'success', message: 'Formulário enviado com sucesso!' });
-                setNome('');
-                setTelefone('');
-                setEmail('');
-                setMensagem('');
-            } else {
-                setAlert({ type: 'error', message: 'Erro ao enviar o formulário. Tente novamente.' });
+                setModalAberto(false);
+                setNome("");
+                setEmail("");
+                setTexto("");
+                alert("Recomendação enviada para aprovação!");
+            } catch (error) {
+                console.error("Erro ao enviar recomendação:", error);
+                alert("Ocorreu um erro ao enviar sua recomendação. Por favor, tente novamente.");
             }
-        } catch (error) {
-            console.error('Erro ao enviar o formulário:', error);
-            setAlert({ type: 'error', message: 'Erro ao enviar o formulário. Tente novamente.' });
-        } finally {
-            setIsLoading(false);
+        } else {
+            alert("Preencha todos os campos corretamente.");
         }
     };
 
-    const closeAlert = () => {
-        setAlert(null);
+    const getGravatarUrl = (email) => {
+        const hash = md5(email.trim().toLowerCase());
+        return `https://www.gravatar.com/avatar/${hash}?s=100&d=identicon`;
     };
 
     return (
-        <section id="contato" className="contato">
-            {isLoading && (
-                <div className="loading-overlay">
-                    <div className="loading-content">
-                        <div className="loading-spinner"></div>
-                        <p>Enviando Formulário...</p>
-                    </div>
-                </div>
-            )}
-            <div className="container-contato" data-aos="fade-up" data-aos-duration="1000">
-                <div className="headline-contato" data-aos="fade-up" data-aos-delay="200">
-                    <div className="titulo-contato">
-                        <h1>
-                            Contato{" "}
-                            <img className="gifs" src={gifContatos} alt="Contato" />
-                        </h1>
-                    </div>
-                    <div className="descricao-contato">
-                        <ul className="lista-contato">
-                            <li>
-                                <a href="https://wa.me/5519999934920" target="_blank" rel="noopener noreferrer">
-                                    <i className="bi bi-whatsapp"></i> WhatsApp
-                                </a>
-                            </li>
-                            <li>
-                                <a href="mailto:ewerton.luiz_1994@hotmail.com?subject=E-mail" target="_blank" rel="noopener noreferrer">
-                                    <i className="bi bi-envelope"></i> E-mail
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://www.bing.com/search?q=amparo+sp+rua+afonso+geremias+186&form=ANNTH1&refig=57924c36853647488fc5aad77ddf44f7&pc=ACTS&ucpdpc=UCPD&adppc=EdgeStart"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <i className="bi bi-geo-alt"></i> Endereço
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="conteudo-contato" data-aos="fade-up" data-aos-delay="400">
-                    <div className="formulario-contato">
-                        <h2>Entre em contato</h2>
-                        <p>
-                            Fique à vontade para entrar em contato! Utilize o formulário abaixo para enviar uma mensagem e eu retornarei o mais breve possível.
-                            Estou sempre aberto a novas oportunidades e parcerias. Estou muito ansioso para fazer sua ideia virar realidade – aceito o desafio!
-                        </p>
-                        <form className="form" onSubmit={handleSubmit}>
+        <div className="recomendacao-container">
+            <button className="recomendacao-botao-azul" onClick={() => setModalAberto(true)}>
+                Criar Recomendação
+            </button>
+
+            {modalAberto && (
+                <div className="recomendacao-modal-overlay">
+                    <div className="recomendacao-modal">
+                        <h2>Nova Recomendação</h2>
+                        <form onSubmit={handleSubmit}>
                             <input
                                 type="text"
-                                placeholder="Digite seu nome completo"
+                                placeholder="Seu nome"
                                 value={nome}
                                 onChange={(e) => setNome(e.target.value)}
                                 required
                             />
                             <input
-                                type="tel"
-                                placeholder="(55) 22222-2222"
-                                value={telefone}
-                                onChange={(e) => setTelefone(e.target.value)}
-                                required
-                            />
-                            <input
                                 type="email"
-                                placeholder="Seu melhor email"
+                                placeholder="Seu e-mail"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
                             />
                             <textarea
-                                name="mensagem"
-                                id="mensagem"
-                                placeholder="Escreva o que você deseja aqui..."
-                                value={mensagem}
-                                onChange={(e) => setMensagem(e.target.value)}
+                                placeholder="Sua recomendação (máximo 200 caracteres)"
+                                value={texto}
+                                onChange={(e) => setTexto(e.target.value)}
+                                maxLength={200}
                                 required
-                            ></textarea>
-                            <button className="btn" type="submit" disabled={isLoading}>
-                                {isLoading ? 'Enviando...' : 'Enviar'}
-                            </button>
+                            />
+                            <small className="contador-caracteres">{texto.length}/200 caracteres</small>
+                            <div className="recomendacao-botoes-modal">
+                                <button type="button" className="recomendacao-botao-vermelho" onClick={() => setModalAberto(false)}>
+                                    Fechar
+                                </button>
+                                <button type="submit" className="recomendacao-botao-azul">
+                                    Enviar para Aprovação
+                                </button>
+                            </div>
                         </form>
                     </div>
-                    <div className="logo-contato" data-aos="fade-up" data-aos-delay="600">
-                        <img src={imagemEmail} alt="Logo de Contato" />
-                    </div>
-                </div>
-            </div>
-            {alert && (
-                <div className={`alert ${alert.type}`}>
-                    <span className="icon">
-                        {alert.type === 'success' && '✔️'}
-                        {alert.type === 'error' && '❌'}
-                    </span>
-                    <span>{alert.message}</span>
-                    <button className="close-btn" onClick={closeAlert}>&times;</button>
                 </div>
             )}
-        </section>
+
+            <div className="recomendacao-recomendacoes-container">
+                <div className="recomendacao-recomendacoes-track">
+                    {recomendacoes.length > 0 ? (
+                        recomendacoes.map((rec, index) => (
+                            <div key={index} className="recomendacao-card">
+                                <img src={getGravatarUrl(rec.email)} alt="Avatar" className="recomendacao-avatar" />
+                                <h3>{rec.nome}</h3>
+                                <p>{rec.texto}</p>
+                            </div>
+                        ))
+                    ) : (
+                        <p>Nenhuma recomendação disponível no momento.</p>
+                    )}
+                </div>
+            </div>
+        </div>
     );
 };
 
-export default Contato;
+export default Recomendacao;
