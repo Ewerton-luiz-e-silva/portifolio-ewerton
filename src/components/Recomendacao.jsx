@@ -9,13 +9,21 @@ const Recomendacao = () => {
     const [texto, setTexto] = useState("");
     const [recomendacoes, setRecomendacoes] = useState([]);
 
+    // URL do backend (usando a variável de ambiente VITE_API_URL ou fallback direto)
+    const BACKEND_URL = import.meta.env.VITE_API_URL;
+
     useEffect(() => {
         // Buscar recomendações aprovadas do backend
-        fetch("http://localhost:3000/recomendacoes")
-            .then((res) => res.json())
+        fetch(`${BACKEND_URL}/recomendacoes`)
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error(`Erro HTTP: ${res.status}`);
+                }
+                return res.json();
+            })
             .then((data) => setRecomendacoes(data))
             .catch((error) => console.error("Erro ao buscar recomendações:", error));
-    }, []);
+    }, [BACKEND_URL]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -23,11 +31,15 @@ const Recomendacao = () => {
             const novaRecomendacao = { nome, email, texto };
 
             try {
-                await fetch("http://localhost:5000/recomendacoes", {
+                const response = await fetch(`${BACKEND_URL}/recomendacoes`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(novaRecomendacao),
                 });
+
+                if (!response.ok) {
+                    throw new Error(`Erro HTTP: ${response.status}`);
+                }
 
                 setModalAberto(false);
                 setNome("");
@@ -36,7 +48,10 @@ const Recomendacao = () => {
                 alert("Recomendação enviada para aprovação!");
             } catch (error) {
                 console.error("Erro ao enviar recomendação:", error);
+                alert("Ocorreu um erro ao enviar sua recomendação. Por favor, tente novamente.");
             }
+        } else {
+            alert("Preencha todos os campos corretamente.");
         }
     };
 
@@ -93,13 +108,17 @@ const Recomendacao = () => {
 
             <div className="recomendacao-recomendacoes-container">
                 <div className="recomendacao-recomendacoes-track">
-                    {recomendacoes.map((rec, index) => (
-                        <div key={index} className="recomendacao-card">
-                            <img src={getGravatarUrl(rec.email)} alt="Avatar" className="recomendacao-avatar" />
-                            <h3>{rec.nome}</h3>
-                            <p>{rec.texto}</p>
-                        </div>
-                    ))}
+                    {recomendacoes.length > 0 ? (
+                        recomendacoes.map((rec, index) => (
+                            <div key={index} className="recomendacao-card">
+                                <img src={getGravatarUrl(rec.email)} alt="Avatar" className="recomendacao-avatar" />
+                                <h3>{rec.nome}</h3>
+                                <p>{rec.texto}</p>
+                            </div>
+                        ))
+                    ) : (
+                        <p>Nenhuma recomendação disponível no momento.</p>
+                    )}
                 </div>
             </div>
         </div>
@@ -107,4 +126,3 @@ const Recomendacao = () => {
 };
 
 export default Recomendacao;
-
