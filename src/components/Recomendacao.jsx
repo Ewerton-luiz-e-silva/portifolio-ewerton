@@ -11,7 +11,7 @@ const Recomendacao = () => {
 
     useEffect(() => {
         // Buscar recomendações aprovadas do backend
-        fetch("http://localhost:5000/recomendacoes")
+        fetch("http://localhost:3000/recomendacoes")
             .then((res) => res.json())
             .then((data) => setRecomendacoes(data))
             .catch((error) => console.error("Erro ao buscar recomendações:", error));
