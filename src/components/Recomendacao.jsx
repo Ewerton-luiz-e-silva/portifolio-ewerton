@@ -2,12 +2,22 @@ import React, { useState, useEffect } from "react";
 import md5 from "md5"; // Biblioteca para gerar hash MD5 (Gravatar)
 import "./css/recomendacao.css";
 
+const Alerta = ({ mensagem, tipo, onFechar }) => {
+    return (
+        <div className={`alerta ${tipo}`}>
+            <span>{mensagem}</span>
+            <button onClick={onFechar}>&times;</button>
+        </div>
+    );
+};
+
 const Recomendacao = () => {
     const [modalAberto, setModalAberto] = useState(false);
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [texto, setTexto] = useState("");
     const [recomendacoes, setRecomendacoes] = useState([]);
+    const [alerta, setAlerta] = useState({ mensagem: "", tipo: "", aberto: false });
 
     // URL do backend (usando a variável de ambiente VITE_API_URL ou fallback direto)
     const BACKEND_URL = import.meta.env.VITE_API_URL;
@@ -22,8 +32,18 @@ const Recomendacao = () => {
                 return res.json();
             })
             .then((data) => setRecomendacoes(data))
-            .catch((error) => console.error("Erro ao buscar recomendações:", error));
+            .catch((error) => {
+                console.error("Erro ao buscar recomendações:", error);
+                mostrarAlerta("Erro ao buscar recomendações.", "erro");
+            });
     }, [BACKEND_URL]);
+
+    const mostrarAlerta = (mensagem, tipo = "sucesso") => {
+        setAlerta({ mensagem, tipo, aberto: true });
+        setTimeout(() => {
+            setAlerta({ mensagem: "", tipo: "", aberto: false });
+        }, 5000); // Fechar o alerta após 5 segundos
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -45,13 +65,13 @@ const Recomendacao = () => {
                 setNome("");
                 setEmail("");
                 setTexto("");
-                alert("Recomendação enviada para aprovação!");
+                mostrarAlerta("Recomendação enviada para aprovação!", "sucesso");
             } catch (error) {
                 console.error("Erro ao enviar recomendação:", error);
-                alert("Ocorreu um erro ao enviar sua recomendação. Por favor, tente novamente.");
+                mostrarAlerta("Ocorreu um erro ao enviar sua recomendação. Por favor, tente novamente.", "erro");
             }
         } else {
-            alert("Preencha todos os campos corretamente.");
+            mostrarAlerta("Preencha todos os campos corretamente.", "erro");
         }
     };
 
@@ -62,6 +82,14 @@ const Recomendacao = () => {
 
     return (
         <div className="recomendacao-container">
+            {alerta.aberto && (
+                <Alerta
+                    mensagem={alerta.mensagem}
+                    tipo={alerta.tipo}
+                    onFechar={() => setAlerta({ mensagem: "", tipo: "", aberto: false })}
+                />
+            )}
+
             <button className="recomendacao-botao-azul" onClick={() => setModalAberto(true)}>
                 Criar Recomendação
             </button>
