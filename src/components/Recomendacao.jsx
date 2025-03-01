@@ -18,6 +18,7 @@ const Recomendacao = () => {
     const [texto, setTexto] = useState("");
     const [recomendacoes, setRecomendacoes] = useState([]);
     const [alerta, setAlerta] = useState({ mensagem: "", tipo: "", aberto: false });
+    const [isLoading, setIsLoading] = useState(false);
 
     // URL do backend (usando a variável de ambiente VITE_API_URL ou fallback direto)
     const BACKEND_URL = import.meta.env.VITE_API_URL;
@@ -48,6 +49,7 @@ const Recomendacao = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (nome && email && texto && texto.length <= 200) {
+            setIsLoading(true);
             const novaRecomendacao = { nome, email, texto };
 
             try {
@@ -69,6 +71,8 @@ const Recomendacao = () => {
             } catch (error) {
                 console.error("Erro ao enviar recomendação:", error);
                 mostrarAlerta("Ocorreu um erro ao enviar sua recomendação. Por favor, tente novamente.", "erro");
+            } finally {
+                setIsLoading(false);
             }
         } else {
             mostrarAlerta("Preencha todos os campos corretamente.", "erro");
@@ -82,6 +86,14 @@ const Recomendacao = () => {
 
     return (
         <div className="recomendacao-container">
+            {isLoading && (
+                <div className="loading-overlay">
+                    <div className="loading-content">
+                        <div className="loading-spinner"></div>
+                        <p>Enviando Recomendação...</p>
+                    </div>
+                </div>
+            )}
             {alerta.aberto && (
                 <Alerta
                     mensagem={alerta.mensagem}
