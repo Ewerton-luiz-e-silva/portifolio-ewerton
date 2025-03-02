@@ -52,6 +52,10 @@
     text-align: center;
 }
 
+.p-portfolio{
+    color: #fff;
+}
+
 /* Abas */
 .portfolio-tabs {
     display: flex;
@@ -261,7 +265,7 @@
     border-radius: 15px;
     padding: 2rem;
     max-width: 800px;
-    width: 90%;
+    width: 95%;
     max-height: 90vh;
     overflow-y: auto;
     position: relative;
@@ -451,5 +455,18 @@
 
     .card {
         width: 100%;
+    }
+
+    .carousel {
+        height: 50%;
+    }
+
+    .carousel img {
+        margin-top: 20%;
+        height: 50%;
+    }
+
+    .modal-content .btn {
+        margin-top: 5%;
     }
 }
