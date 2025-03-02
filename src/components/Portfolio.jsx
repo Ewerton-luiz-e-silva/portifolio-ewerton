@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./css/portfolio.css"; // Importe o CSS correspondente
 import "./css/style.css";
 
+import portfolio from './img/Gif portfolio.gif';
+
 const Portfolio = () => {
 const [activeTab, setActiveTab] = useState();
 const [isModalOpen, setIsModalOpen] = useState(false);
@@ -661,7 +663,9 @@ return (
     <section id="portfolio" className="portfolio">
     {/* Título e Descrição */}
     <div className="headline-portfolio">
-        <h1 className="titulo">Portfolio</h1>
+        <h1 className="titulo">Portfolio
+            <img className="gifs" src={portfolio} alt="portfolio" data-aos="zoom-in" data-aos-delay="300"/>
+        </h1>
         <span className="descricao" id="p-descricao">
         Bem-vindo à seção onde compartilho minhas conquistas acadêmicas e profissionais. Aqui você encontrará meus certificados de cursos que aprimoram minhas habilidades em desenvolvimento e tecnologia, além de projetos que aplicam esses conhecimentos na prática. Cada certificado representa um novo passo na minha jornada de aprendizado contínuo. Já os projetos demonstram minha capacidade de transformar teoria em soluções funcionais e inovadoras. Explore e conheça mais sobre minha trajetória!
         </span>

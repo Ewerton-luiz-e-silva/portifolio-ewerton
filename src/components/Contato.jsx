@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./css/contato.css"; // Importe o CSS correspondente
 import "./css/style.css";
 import "./css/clash-grotesk.css";
-import gifContatos from './img/Gif contato.gif';
+import gifContatos from './img/Gif 01.gif';
 import imagemEmail from './img/email.png';
 
 const Contato = () => {

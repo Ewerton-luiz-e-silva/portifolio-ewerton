@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import "./css/servicos.css";
 import "./css/style.css";
 
-import gifServicos from './img/Gif serviços.gif';
+import gifServicos from './img/Gif Serviços 02.gif';
 
 const Servicos = () => {
 useEffect(() => {

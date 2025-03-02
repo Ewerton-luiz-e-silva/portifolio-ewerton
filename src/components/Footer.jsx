@@ -20,7 +20,7 @@ const Footer = () => {
                     <nav className="footer-nav">
                         <a href="#inicio">Início <i class="bi bi-house-fill"></i></a>
                         <a href="#sobre">Sobre <i class="bi bi-file-person-fill"></i></a>
-                        <a href="#skills">Skills <i class="bi bi-file-person-fill"></i></a>
+                        <a href="#skills">Skills <i class="bi bi-backpack2"></i></a>
                         <a href="#servicos">Serviços <i class="bi bi-journal-code"></i></a>
                         <a href="#portfolio">Portfolio <i class="bi bi-code-slash"></i></a>
                         <a href="#contato">Contato <i class="bi bi-chat-left-dots-fill"></i></a>

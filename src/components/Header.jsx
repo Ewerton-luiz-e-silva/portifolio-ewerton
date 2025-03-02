@@ -83,7 +83,7 @@ return (
             SOBRE   <i class="bi bi-file-person-fill"></i>
             </a>
             <a href="#skills" onClick={toggleMenu}>
-            SKILLS   <i class="bi bi-file-person-fill"></i>
+            SKILLS   <i class="bi bi-backpack2"></i>
             </a>
             <a href="#servicos" onClick={toggleMenu}>
             SERVIÇOS <i class="bi bi-journal-code"></i>
