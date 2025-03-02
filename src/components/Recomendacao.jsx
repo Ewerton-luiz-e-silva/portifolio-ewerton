@@ -17,7 +17,7 @@ const Recomendacao = () => {
     const [email, setEmail] = useState("");
     const [texto, setTexto] = useState("");
     const [recomendacoes, setRecomendacoes] = useState([]);
-    const [alerta, setAlerta] = useState({ mensagem: "", tipo: "", aberto: false });
+    const [alerta, setAlerta] = useState(null); // Estado inicial do alerta como null
     const [isLoading, setIsLoading] = useState(false);
 
     // URL do backend (usando a variável de ambiente VITE_API_URL ou fallback direto)
@@ -35,15 +35,15 @@ const Recomendacao = () => {
             .then((data) => setRecomendacoes(data))
             .catch((error) => {
                 console.error("Erro ao buscar recomendações:", error);
-                mostrarAlerta("Erro ao buscar recomendações.", "erro");
+                // Não mostramos alerta aqui, pois não é uma interação do usuário
             });
     }, [BACKEND_URL]);
 
     const mostrarAlerta = (mensagem, tipo = "sucesso") => {
-        setAlerta({ mensagem, tipo, aberto: true });
+        setAlerta({ mensagem, tipo }); // Define o alerta
         setTimeout(() => {
-            setAlerta({ mensagem: "", tipo: "", aberto: false });
-        }, 5000); // Fechar o alerta após 5 segundos
+            setAlerta(null); // Remove o alerta após 5 segundos
+        }, 5000);
     };
 
     const handleSubmit = async (e) => {
@@ -94,11 +94,11 @@ const Recomendacao = () => {
                     </div>
                 </div>
             )}
-            {alerta.aberto && (
+            {alerta && ( // Renderiza o alerta apenas se houver um valor em "alerta"
                 <Alerta
                     mensagem={alerta.mensagem}
                     tipo={alerta.tipo}
-                    onFechar={() => setAlerta({ mensagem: "", tipo: "", aberto: false })}
+                    onFechar={() => setAlerta(null)} // Fecha o alerta ao clicar no botão
                 />
             )}
 

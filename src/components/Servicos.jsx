@@ -9,7 +9,7 @@ import gifServicos from './img/Gif serviços.gif';
 const Servicos = () => {
 useEffect(() => {
     AOS.init({
-    duration: 1000, // Duração das animações
+    duration: 300, // Duração das animações
     once: true,     // Animação ocorre apenas uma vez
     });
 }, []);
