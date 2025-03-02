@@ -411,8 +411,33 @@
 }
 
 /* ***************** RESPONSIVO ***************** */
-/* Estilos para dispositivos móveis e tablets */
-@media (max-width: 1024px) {
+
+/* Para tablets (largura máxima de 1024px) */
+@media screen and (max-width: 1024px) {
+    .portfolio {
+        padding: 1.5rem;
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .portfolio-tabs {
+        gap: 0.5rem;
+    }
+
+    .portfolio-content {
+        justify-content: center;
+    }
+
+    .portfolio-item {
+        min-width: 300px;
+    }
+
+    .card {
+        width: 160px;
+    }
+
     .description-overlay {
         padding: 1rem; /* Adiciona um pouco de espaço nas laterais */
         backdrop-filter: blur(5px); /* Reduz o desfoque para melhor performance */
@@ -470,8 +495,34 @@
     }
 }
 
-/* Estilos específicos para celulares (telas menores que 768px) */
-@media (max-width: 768px) {
+/* Para telas menores (largura máxima de 768px) */
+@media screen and (max-width: 768px) {
+    .portfolio {
+        padding: 1rem;
+    }
+
+    .titulo {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-item {
+        width: 90%;
+    }
+
+    .gallery {
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
     .description-overlay {
         padding: 0.5rem; /* Espaçamento ainda menor para celulares */
     }
@@ -502,61 +553,6 @@
         transform: translateX(-50%); /* Ajusta a centralização */
         padding: 0.6rem 1.2rem; /* Botão menor */
         font-size: 0.85rem; /* Fonte menor */
-    }
-}
-/* Para tablets (largura máxima de 1024px) */
-@media screen and (max-width: 1024px) {
-    .portfolio {
-        padding: 1.5rem;
-    }
-
-    .titulo {
-        font-size: 2rem;
-    }
-
-    .portfolio-tabs {
-        gap: 0.5rem;
-    }
-
-    .portfolio-content {
-        justify-content: center;
-    }
-
-    .portfolio-item {
-        min-width: 300px;
-    }
-
-    .card {
-        width: 160px;
-    }
-}
-
-/* Para telas menores (largura máxima de 768px) */
-@media screen and (max-width: 768px) {
-    .portfolio {
-        padding: 1rem;
-    }
-
-    .titulo {
-        font-size: 1.8rem;
-    }
-
-    .portfolio-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .portfolio-item {
-        width: 90%;
-    }
-
-    .gallery {
-        align-items: center;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 300px;
     }
 }
 
