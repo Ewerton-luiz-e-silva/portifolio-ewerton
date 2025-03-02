@@ -811,7 +811,7 @@ return (
             <h2>{selectedItem.title}</h2>
             <pre>{selectedItem.description}</pre>
             <button className="btn" onClick={closeDescription}>
-            Fechar Descrição
+            x
             </button>
         </div>
         </div>

@@ -314,61 +314,196 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Descrição do Projeto */
+/* Descrição do Projeto - Estilo Moderno e Profissional */
 .description-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)); /* Gradiente escuro */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100002;
-    color: #111;
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+    animation: fadeIn 0.5s ease-in-out; /* Animação de entrada */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .description-content {
-    background-color: #fff; /* Cor de fundo da descrição */
-    padding: 2rem;
-    border-radius: 15px;
-    max-width: 800px;
+    background: linear-gradient(145deg, #ffffff, #f9f9f9); /* Gradiente claro */
+    padding: 2.5rem;
+    border-radius: 20px;
+    max-width: 1000px;
     width: 90%;
-    max-height: 90vh;
+    max-height: 95vh;
     overflow-y: auto;
     position: relative;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    transform: scale(0.95);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.description-content:hover {
+    transform: scale(1);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5); /* Sombra mais destacada ao passar o mouse */
 }
 
 .description-content h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
     text-align: center;
-    color: var(--color-text); /* Cor do texto */
+    color: #333; /* Cor escura para contraste */
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc); /* Gradiente no texto */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .description-content pre {
     white-space: pre-wrap;
-    font-family: inherit;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--color-text); /* Cor do texto */
+    font-family: 'Inter', sans-serif; /* Fonte moderna */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444; /* Cor de texto suave */
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.05); /* Fundo sutil para o texto */
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/* Botão movido para o topo */
 .description-content .btn {
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--color-btn-bg); /* Cor de fundo do botão */
-    color: var(--color-btn-text); /* Cor do texto do botão */
+    position: absolute; /* Posicionamento absoluto */
+    top: 1rem; /* Distância do topo */
+    right: 1rem; /* Distância da direita */
+    padding: 0.9rem 2rem;
+    background: linear-gradient(90deg, #6a11cb, #2575fc); /* Gradiente no botão */
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    border: solid 3px #000;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(106, 17, 203, 0.3); /* Sombra do botão */
+}
+
+.description-content .btn:hover {
+    background: linear-gradient(90deg, #2575fc, #6a11cb); /* Inverte o gradiente ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de levantar */
+    box-shadow: 0 6px 16px rgba(106, 17, 203, 0.4);
+}
+
+.description-content .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(106, 17, 203, 0.3);
 }
 
 /* ***************** RESPONSIVO ***************** */
+/* Estilos para dispositivos móveis e tablets */
+@media (max-width: 1024px) {
+    .description-overlay {
+        padding: 1rem; /* Adiciona um pouco de espaço nas laterais */
+        backdrop-filter: blur(5px); /* Reduz o desfoque para melhor performance */
+    }
+
+    .description-content {
+        padding: 1.5rem; /* Reduz o padding para telas menores */
+        border-radius: 15px; /* Bordas um pouco menos arredondadas */
+        max-width: 90%; /* Ajusta a largura máxima */
+        max-height: 95vh; /* Ajusta a altura máxima */
+        position: relative; /* Permite posicionamento absoluto dentro do container */
+    }
+
+    .description-content h2 {
+        font-size: 2rem; /* Reduz o tamanho da fonte do título */
+        margin-top: 4rem; /* Ajusta o espaçamento superior para evitar sobreposição com o botão */
+        margin-bottom: 1rem; /* Espaçamento inferior */
+        text-align: center; /* Centraliza o título */
+    }
+
+    .description-content pre {
+        font-size: 1rem; /* Reduz o tamanho da fonte do texto */
+        padding: 0.4rem; /* Ajusta o padding interno */
+        margin: 1rem 0; /* Ajusta o espaçamento */
+    }
+
+    .description-content .btn {
+        position: absolute; /* Posicionamento absoluto para centralizar no topo */
+        top: 1rem; /* Distância do topo */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta a centralização */
+        padding: 0.75rem 1.5rem; /* Reduz o padding do botão */
+        font-size: 0.9rem; /* Reduz o tamanho da fonte do botão */
+        background: linear-gradient(90deg, #6a11cb, #2575fc); /* Gradiente no botão */
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(106, 17, 203, 0.3); /* Sombra do botão */
+    }
+
+    .description-content .btn:hover {
+        background: linear-gradient(90deg, #2575fc, #6a11cb); /* Inverte o gradiente ao passar o mouse */
+        transform: translateX(-50%) translateY(-2px); /* Mantém a centralização e adiciona efeito de levantar */
+        box-shadow: 0 6px 16px rgba(106, 17, 203, 0.4);
+    }
+
+    .description-content .btn:active {
+        transform: translateX(-50%) translateY(0); /* Mantém a centralização */
+        box-shadow: 0 4px 12px rgba(106, 17, 203, 0.3);
+    }
+}
+
+/* Estilos específicos para celulares (telas menores que 768px) */
+@media (max-width: 768px) {
+    .description-overlay {
+        padding: 0.5rem; /* Espaçamento ainda menor para celulares */
+    }
+
+    .description-content {
+        padding: 1rem; /* Padding reduzido */
+        border-radius: 10px; /* Bordas menos arredondadas */
+        max-height: 95vh; /* Altura máxima menor */
+        position: relative; /* Garante que o posicionamento absoluto do botão funcione */
+    }
+
+    .description-content h2 {
+        font-size: 1.75rem; /* Título menor */
+        margin-top: 3rem; /* Ajusta o espaçamento superior para evitar sobreposição com o botão */
+        margin-bottom: 0.75rem; /* Espaçamento menor */
+    }
+
+    .description-content pre {
+        font-size: 0.9rem; /* Fonte menor para o texto */
+        padding: 0.6rem; /* Padding menor */
+        margin: 0.75rem 0; /* Espaçamento menor */
+    }
+
+    .description-content .btn {
+        position: absolute; /* Posicionamento absoluto para centralizar no topo */
+        top: 1rem; /* Distância do topo */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta a centralização */
+        padding: 0.6rem 1.2rem; /* Botão menor */
+        font-size: 0.85rem; /* Fonte menor */
+    }
+}
 /* Para tablets (largura máxima de 1024px) */
 @media screen and (max-width: 1024px) {
     .portfolio {
@@ -377,11 +512,6 @@
 
     .titulo {
         font-size: 2rem;
-    }
-
-    .descricao {
-        font-size: 1rem;
-        max-width: 90%;
     }
 
     .portfolio-tabs {
@@ -411,10 +541,6 @@
         font-size: 1.8rem;
     }
 
-    .descricao {
-        font-size: 0.9rem;
-    }
-
     .portfolio-content {
         flex-direction: column;
         align-items: center;
@@ -438,10 +564,6 @@
 @media screen and (max-width: 480px) {
     .titulo {
         font-size: 1.5rem;
-    }
-
-    .descricao {
-        font-size: 0.8rem;
     }
 
     .portfolio-tabs {
