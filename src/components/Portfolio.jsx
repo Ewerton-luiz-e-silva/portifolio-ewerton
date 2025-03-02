@@ -681,18 +681,21 @@ return (
         onClick={() => handleTabClick("certificados")}
         >
         Certificados
+        <i class="bi bi-patch-check-fill"></i>
         </button>
         <button
         className={`tab-btn ${activeTab === "projetos-ebac" ? "active" : ""}`}
         onClick={() => handleTabClick("projetos-ebac")}
         >
         Projetos EBAC
+        <i class="bi bi-file-slides-fill"></i>
         </button>
         <button
         className={`tab-btn ${activeTab === "projetos-pessoais" ? "active" : ""}`}
         onClick={() => handleTabClick("projetos-pessoais")}
         >
         Projetos Pessoais
+        <i class="bi bi-file-easel-fill"></i>
         </button>
     </div>
 
@@ -707,7 +710,8 @@ return (
                 <img src={certificado.images[0]} alt={certificado.title} />
                 <h3>{certificado.title}</h3>
                 <button className="btn" onClick={() => openModal(certificado)}>
-                    Saiba +
+                    Saiba 
+                    <i class="bi bi-plus-circle-fill"></i>
                 </button>
                 </div>
             ))}
@@ -730,6 +734,7 @@ return (
                             onClick={() => window.open(projeto.deployLink, "_blank")}
                         >
                             Deploy
+                            <i class="bi bi-caret-up-fill"></i>
                         </button>
 
                         {/* Botão GitHub */}
@@ -738,10 +743,12 @@ return (
                             onClick={() => window.open(projeto.githubLink, "_blank")}
                         >
                             GitHub
+                            <i class="bi bi-github"></i>
                         </button>
 
                     <button className="btn" onClick={() => openModal(projeto)}>
-                        Saiba +
+                        Saiba 
+                        <i class="bi bi-plus-circle-fill"></i>
                     </button>
                 </div>
             ))}
@@ -764,6 +771,7 @@ return (
                             onClick={() => window.open(projeto.deployLink, "_blank")}
                         >
                             Deploy
+                            <i class="bi bi-caret-up-fill"></i>
                         </button>
 
                         {/* Botão GitHub */}
@@ -772,10 +780,12 @@ return (
                             onClick={() => window.open(projeto.githubLink, "_blank")}
                         >
                             GitHub
+                            <i class="bi bi-github"></i>
                         </button>
 
                     <button className="btn" onClick={() => openModal(projeto)}>
-                        Saiba +
+                        Saiba
+                        <i class="bi bi-plus-circle-fill"></i>
                     </button>
                 </div>
             ))}
