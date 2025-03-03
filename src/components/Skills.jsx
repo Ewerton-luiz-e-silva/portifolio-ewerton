@@ -44,7 +44,7 @@ const Skills = () => {
         {/* Conteúdo das Habilidades */}
         <div className="conteudo-skills">
           {skillsList.map((skill, index) => (
-            <div className="box-skills" key={index} data-aos="fade-up" data-aos-duration="100" data-aos-delay={`${100 + index * 50}`} data-aos-duration="500">
+            <div className="box-skills" key={index} data-aos="fade-up" data-aos-duration="100" data-aos-delay={`${100 + index * 50}`}>
               <i className={`bi ${skill.icon}`}></i>
               <h3>{skill.title}</h3>
               <p>{skill.description}</p>
