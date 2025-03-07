@@ -2,7 +2,7 @@
 .recomendacao-container {
     padding: 40px 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1a1a1a;
+    background-color: rgba(65, 105, 225, 0.5);
     color: #ffffff;
     border-radius: 50px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -73,7 +73,7 @@
     border-radius: 12px;
     width: 90%;
     max-width: 500px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.3s ease;
 }
 
@@ -163,9 +163,9 @@
     overflow: hidden;
     position: relative;
     padding: 20px 0;
-    background: linear-gradient(135deg, #2c3e50, #1a1a1a);
+    background: linear-gradient(135deg, rgba(48, 51, 107, 0.5), rgba(0, 0, 0, 0.3));
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Trilho das recomendações */
@@ -187,7 +187,7 @@
 
 /* Cards das recomendações */
 .recomendacao-card {
-    background: rgba(44, 62, 80, 0.8); /* Fundo transparente fosco */
+    background: rgba(44, 62, 80, 0.4); /* Fundo transparente fosco */
     padding: 20px;
     border-radius: 16px; /* Bordas mais arredondadas */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 6px 30px rgba(0, 0, 0, 0.3); /* Sombra mais suave e difusa */
