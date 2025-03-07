@@ -101,7 +101,9 @@ const Recomendacao = () => {
                     onFechar={() => setAlerta(null)} // Fecha o alerta ao clicar no botão
                 />
             )}
-
+            <div>
+                <h2 className="rocomendacoes-titulo">Recomendações</h2>
+            </div>
             <button className="recomendacao-botao-azul" onClick={() => setModalAberto(true)}>
                 Criar Recomendação
             </button>

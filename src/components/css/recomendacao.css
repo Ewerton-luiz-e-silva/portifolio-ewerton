@@ -12,6 +12,27 @@
     margin-top: 50px;
 }
 
+.rocomendacoes-titulo {
+    font-size: 2.0rem;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.rocomendacoes-titulo::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #3a7bd5;
+}
+
 /* Botão azul neon */
 .recomendacao-botao-azul {
     background: linear-gradient(135deg, #00d2ff, #3a7bd5);
@@ -166,17 +187,46 @@
 
 /* Cards das recomendações */
 .recomendacao-card {
-    background: #2c3e50;
+    background: rgba(44, 62, 80, 0.8); /* Fundo transparente fosco */
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 16px; /* Bordas mais arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 6px 30px rgba(0, 0, 0, 0.3); /* Sombra mais suave e difusa */
     min-width: 300px;
     max-width: 300px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Borda mais sutil */
     word-wrap: break-word;
     overflow: hidden;
     text-align: center;
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+    color: #ffffff; /* Cor do texto */
+    position: relative;
+}
+
+/* Efeito de hover para interatividade */
+.recomendacao-card:hover {
+    transform: translateY(-10px); /* Levanta o card */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 12px 40px rgba(0, 0, 0, 0.4); /* Sombra mais intensa no hover */
+    background: rgba(44, 62, 80, 0.9); /* Fundo um pouco mais opaco no hover */
+}
+
+/* Efeito de brilho sutil ao redor do card */
+.recomendacao-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.recomendacao-card:hover::before {
+    opacity: 1; /* Mostra o brilho no hover */
 }
 
 /* Avatar do Gravatar */
